@@ -1908,9 +1908,9 @@ footer .footerContainer:after {
 }
 
 footer .footerContainer .footerMenu,
+footer .footerContainer .footerContato,
 footer .footerContainer .formasDePagamentos,
-footer .footerContainer .footerSocial,
-footer .footerContainer .footerContato {
+footer .footerContainer .footerSocial {
   width: 100%;
   float: left;
   margin-left: 0;
@@ -1919,46 +1919,50 @@ footer .footerContainer .footerContato {
 }
 
 footer .footerContainer .footerMenu h2,
+footer .footerContainer .footerContato h2,
 footer .footerContainer .formasDePagamentos h2,
-footer .footerContainer .footerSocial h2,
-footer .footerContainer .footerContato h2 {
+footer .footerContainer .footerSocial h2 {
   text-transform: uppercase;
 }
 
 footer .footerContainer .footerMenu ul,
+footer .footerContainer .footerContato ul,
 footer .footerContainer .formasDePagamentos ul,
-footer .footerContainer .footerSocial ul,
-footer .footerContainer .footerContato ul {
+footer .footerContainer .footerSocial ul {
   text-decoration: none;
 }
 
 footer .footerContainer .footerMenu ul li,
+footer .footerContainer .footerContato ul li,
 footer .footerContainer .formasDePagamentos ul li,
-footer .footerContainer .footerSocial ul li,
-footer .footerContainer .footerContato ul li {
+footer .footerContainer .footerSocial ul li {
   list-style: none;
 }
 
 footer .footerContainer .footerMenu ul li a,
+footer .footerContainer .footerContato ul li a,
 footer .footerContainer .formasDePagamentos ul li a,
-footer .footerContainer .footerSocial ul li a,
-footer .footerContainer .footerContato ul li a {
+footer .footerContainer .footerSocial ul li a {
   text-decoration: none;
   color: white;
 }
 
 footer .footerContainer .footerMenu ul li a:hover,
+footer .footerContainer .footerContato ul li a:hover,
 footer .footerContainer .formasDePagamentos ul li a:hover,
-footer .footerContainer .footerSocial ul li a:hover,
-footer .footerContainer .footerContato ul li a:hover {
+footer .footerContainer .footerSocial ul li a:hover {
   color: #ff0d00;
 }
 
 footer .footerContainer .footerMenu ul li a:active,
+footer .footerContainer .footerContato ul li a:active,
 footer .footerContainer .formasDePagamentos ul li a:active,
-footer .footerContainer .footerSocial ul li a:active,
-footer .footerContainer .footerContato ul li a:active {
+footer .footerContainer .footerSocial ul li a:active {
   color: #0033ff;
+}
+
+footer .footerContainer .footerContato span {
+  display: block;
 }
 
 footer .footerContainer .formasDePagamentos {
@@ -2061,8 +2065,11 @@ footer .footerContainer .footerSocial .iconRedes .whatsapp {
   background: url(/fonts/whatsapp.svg?d6631d67f744c8ed4e36a425c54c347a) no-repeat center 100%;
 }
 
-footer .footerContainer .footerContato span {
-  display: block;
+footer .footerContainer .logo p,
+footer .footerContainer section.serviceMkt .serviceMktRow .mktService .descriptionService h2 p,
+section.serviceMkt .serviceMktRow .mktService .descriptionService footer .footerContainer h2 p {
+  color: white;
+  margin-top: -2rem;
 }
 
 @media (min-width: 40em) and (max-width: 64.27em) {
@@ -2079,18 +2086,18 @@ footer .footerContainer .footerContato span {
   }
 
   footer .footerContainer .footerMenu,
+  footer .footerContainer .footerContato,
   footer .footerContainer .formasDePagamentos,
-  footer .footerContainer .footerSocial,
-  footer .footerContainer .footerContato {
+  footer .footerContainer .footerSocial {
     width: 35.8974359%;
     float: left;
     margin-right: 2.56410256%;
   }
 
   footer .footerContainer .footerMenu ul li,
+  footer .footerContainer .footerContato ul li,
   footer .footerContainer .formasDePagamentos ul li,
-  footer .footerContainer .footerSocial ul li,
-  footer .footerContainer .footerContato ul li {
+  footer .footerContainer .footerSocial ul li {
     margin-bottom: 5%;
   }
 
@@ -2177,9 +2184,9 @@ footer .footerContainer .footerContato span {
   }
 
   footer .footerContainer .footerMenu,
+  footer .footerContainer .footerContato,
   footer .footerContainer .formasDePagamentos,
-  footer .footerContainer .footerSocial,
-  footer .footerContainer .footerContato {
+  footer .footerContainer .footerSocial {
     width: 15.25423729%;
     float: left;
     margin-right: 1.69491525%;

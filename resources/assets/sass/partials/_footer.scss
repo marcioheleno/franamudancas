@@ -8,7 +8,6 @@ footer{
   .footerContainer{
     @include container(80%);
 
-
     .footerMenu{
       @include span(4 of 4);
       color: $colorPrimary;
@@ -37,6 +36,14 @@ footer{
         }
       }
     } //footerMenu
+
+    .footerContato {
+      @extend .footerMenu;
+      span {
+        display: block;
+      }
+      //@include span(last 1 of 4);
+    }
 
     .formasDePagamentos {
       @include span(full);
@@ -124,14 +131,15 @@ footer{
       }
     }
 
-
-    .footerContato {
-      @extend .footerMenu;
-      span {
-        display: block;
+    .logo{
+      p{
+        color: $colorPrimary;
+        margin-top: - 2rem;
       }
-      //@include span(last 1 of 4);
+
     }
+
+
   }
 
   @include susy-breakpoint(40em 64.27em, $gMedium) {
