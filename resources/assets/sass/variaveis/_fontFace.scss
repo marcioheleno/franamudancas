@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'slipstreamforward';
+  src: url('../fonts/slipstream/slipstream_forward-webfont.woff2') format('woff2'),
+    url('../fonts/slipstream/slipstream_forward-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arialbold_italic';
+  src: url('../fonts/arial/arialbi-webfont.woff2') format('woff2'),
+  url('../fonts/arial/arialbi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'rageItalic';
+  src: url('../fonts/RageItalic/RageItalic.ttf') format('ttf'),
+  url('../fonts/RageItalic/RageItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// testimonial
+// fonts
+
+$primary-font: 'Helvetica Neue', sans-serif;
+$secondary-font: 'Georgia', serif;

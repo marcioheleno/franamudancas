@@ -1,0 +1,200 @@
+section.slideComponent {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+
+}
+
+.slideWrap {
+  height: 100%;
+
+  #fullscreen {
+    height: 100%;
+    background: none;
+    color: white;
+  }
+
+  //#sec {
+  //
+  //  .slidecontent {
+  //    //margin-top: 0;
+  //    padding-top: 39%;
+  //    //position: absolute;
+  //    //bottom: -5rem;
+  //
+  //    .slideHeader {
+  //      position: relative;
+  //      //button: 2rem;
+  //    }
+  //
+  //    h1 {
+  //      //color: $colorTertiary;
+  //      font-size: 2.5rem;
+  //      text-align: left;
+  //
+  //      @include susy-breakpoint(64.28em, $gDesk) {
+  //        text-align: center;
+  //        padding-top: 5rem;
+  //        text-transform: uppercase;
+  //
+  //      }
+  //
+  //    }
+  //
+  //  }
+  //}
+
+  .slideBlock {
+    width: 100%;
+
+    .slider {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      //background: green;
+
+      .slide {
+        @include span(100%);
+        //width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        float: left;
+        position: absolute;
+
+        .slidecontent {
+          @include span(80%);
+          position: absolute;
+          top: 50%;
+          //width: 80%;
+          margin: 0 10%;
+          //margin-top: 22%;
+          text-align: center;
+
+          img {
+            margin-top: 5%;
+          }
+
+          h1 {
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            //font-size: 120%;
+            margin: 20px 0 30px 0;
+            padding: 0;
+            font-size: 3rem;
+            color: $colorSecundary;
+            font-weight: bold;
+            //display: block;
+            //line-height: 115px;
+          }
+
+          h2 {
+            font-size: 2rem;
+            color: $colorTertiary;
+          }
+
+          .slideButton {
+            font-family: 'Lato', sans-serif;
+            font-size: 2rem;
+            padding: 1rem 1rem;
+            border: 0.3rem solid white;
+            border-radius: 25px;
+
+            a {
+              text-decoration: none;
+              color: $colorPrimary;
+            }
+          }
+
+          @include susy-breakpoint(64.28em, $gDesk) {
+            @include span(80%);
+
+            img {
+              @include container(60%);
+            }
+
+            h1 {
+              font-size: 7rem;
+            }
+
+            h2{
+              font-size: 3rem;
+            }
+            .slideButton{
+              @include container(60%);
+            }
+
+          }
+        }
+      }
+    }
+    // .slideblock
+  }
+
+  // customização do slide
+  //#first {
+  //  .slideButton {
+  //    position: relative;
+  //    width: 80%;
+  //    bottom: 0;
+  //    text-align: center;
+  //
+  //    a {
+  //      font-size: 1.5rem;
+  //      font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+  //      color: $colorPrimary;
+  //      font-weight: bold;
+  //      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  //      text-decoration: none;
+  //      letter-spacing: 2px;
+  //      text-transform: uppercase;
+  //    }
+  //
+  //    @include susy-breakpoint(64.28em, $gDesk) {
+  //      // contexto dentro da dimensão de 64.28em = 1028px
+  //      width: 50%;
+  //      position: absolute;
+  //      left: 50%;
+  //      margin-left: -25%;
+  //      padding: .5rem;
+  //
+  //    }
+  //  }
+  //}
+
+  //  slide controller
+  #slideposition {
+    @include span(12 of 12);
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    // Todo so ate 9
+    z-index: 10;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li.indicator {
+        display: inline-block;
+        height: .8rem;
+        width: .8rem;
+        background: #222;
+        margin: 0 .75rem;
+        padding: 0;
+        border-radius: .8rem;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      li.indicator.active {
+        background: white;
+      }
+    }
+  }
+}
+

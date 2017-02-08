@@ -1,0 +1,297 @@
+footer{
+  @include span(full);
+  background: $colorAzul;
+  height: auto;
+  //position: fixed;
+  bottom: 0;
+
+  .footerContainer{
+    @include container(80%);
+
+
+    .footerMenu{
+      @include span(4 of 4);
+      color: $colorPrimary;
+
+      h2 {
+        text-transform: uppercase;
+      }
+
+      ul{
+        text-decoration: none;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: $colorPrimary;
+
+            &:hover {
+              color: $colorTertiary;
+            }
+            &:active {
+              color: $colorSecundary;
+            }
+          }
+        }
+      }
+    } //footerMenu
+
+    .formasDePagamentos {
+      @include span(full);
+      //background: pink;
+      @extend .footerMenu;
+
+      .iconCard{
+        //@extend
+
+        a{
+          text-indent: -99999px;
+          //border-radius: .5rem;
+
+          &:hover {
+            opacity: .5;
+          }
+
+          &:nth-child(1){
+            @include span(1 of 4);
+            height: 2.70rem;
+            background: url("../images/masterCard.svg") no-repeat center 100%;
+
+          }
+          &:nth-child(2){
+            @include span(1 of 4);
+            height: 2.70rem;
+            background: url("../images/visaCard.svg") no-repeat center 100%;
+          }
+          &:nth-child(3){
+            @include span(1 of 4);
+            height: 2.70rem;
+            background: url("../images/dinnersCard.svg") no-repeat center 100%;
+          }
+          &:last-child{
+            @include span(last 1 of 4);
+            height: 2.70rem;
+            background: url("../images/hiperCard.svg") no-repeat center 100%;
+          }
+        }
+      }
+    }
+
+    .footerSocial {
+      @include span(full);
+      //background: pink;
+      @extend .footerMenu;
+      //@include container(4);
+
+      .iconRedes {
+        //@include container(75%);
+        //background: green;
+
+        a {
+        //  //@include span(100%);
+        //  //display: inline-block;
+          text-indent: -99999px;
+
+          &:hover {
+            opacity: .5;
+          }
+        }
+        .instagram {
+          @include span(1 of 4);
+          //text-indent: -99999px;
+          //width: 24%;
+          height: 2.70rem;
+          //padding: .3rem;
+          background: url("../images/instagram.svg") no-repeat center 100%;
+        }
+        .facebook {
+          @extend .instagram;
+          @include span(1 at 2 of 4);
+          background: url("../images/facebook.svg") no-repeat center 100%;
+        }
+        .twitter {
+          @extend .instagram;
+          @include span(1 at 3 of 4);
+          background: url("../images/twitter.svg") no-repeat center 100%;
+        }
+        .whatsapp {
+          @extend .instagram;
+          @include span(last 1 of 4);
+          background: url("../images/whatsapp.svg") no-repeat center 100%;
+        }
+      }
+    }
+
+
+    .footerContato {
+      @extend .footerMenu;
+      span {
+        display: block;
+      }
+      //@include span(last 1 of 4);
+    }
+  }
+
+  @include susy-breakpoint(40em 64.27em, $gMedium) {
+    //@include container(100%);
+    .footerContainer{
+      @include container(80%);
+
+      .footerMenu {
+        @include span(3 of 8);
+
+        ul {
+          li{
+            margin-bottom: 5%;
+            //background-color: #d8dade;
+          }
+        }
+      }
+
+      .formasDePagamentos {
+        @include span(last 5 of 8);
+        //background-color: yellow;
+        //margin-bottom: 1rem;
+      }
+
+      .footerSocial {
+        @include span(last 5 of 8);
+        //background-color: #aa3322;
+        margin-bottom: 1rem;
+      }
+      .footerContato {
+        @include span(full);
+        //background-color: #cc6633;
+
+        .fones {
+          //white-space: nowrap;
+          text-align: center;
+
+          span{
+            display: inline;
+            text-align: justify;
+            margin-bottom: 0;
+
+            &:after {
+              content: ' | ';
+            }
+
+            &:nth-child(4) {
+              &:after {
+                content: '';
+              }
+            }
+          }
+          .email {
+
+            p {
+              font-weight: 400;
+              text-align: center;
+              //background-color: #0033ff;
+            }
+          }
+        }
+        .enderecos {
+          @include span(full);
+          text-align: center;
+          //background-color: #aa3322;
+          margin-bottom: 1rem;
+
+          h3 {
+            text-align: left;
+          }
+          p {
+            display: inline;
+            &:after {
+              content: ' - ';
+            }
+            &:last-child {
+
+              &:after {
+                content: '.';
+              }
+            }
+          }
+        }
+      }
+    }
+  } // breackpoint 40em 8 coluns
+
+  @include susy-breakpoint(64.28em, $gDesk) {
+    //background-color: #222222;
+    .footerContainer {
+      @include container(80%);
+
+      .footerMenu {
+        @include span(2 of 12);
+      }
+      .formasDePagamentos {
+        @include span(5 of 12);
+      }
+      .footerSocial {
+        //@include container(100%);
+        @include span(last 5 of 12);
+      }
+      .footerContato {
+        @include span(80%);
+        margin-top: 1rem;
+        //background-color: #cc6633;
+        line-height: .2rem;
+
+        .fones {
+          //white-space: nowrap;
+          text-align: center;
+
+          span{
+            display: inline;
+            text-align: justify;
+            margin-bottom: 0;
+
+            &:after {
+              content: ' | ';
+            }
+
+            &:nth-child(4) {
+              &:after {
+                content: '';
+              }
+            }
+          }
+          .email {
+
+            p {
+              font-weight: 400;
+              text-align: center;
+              //background-color: #0033ff;
+            }
+          }
+        }
+        .enderecos {
+          @include span(full);
+          text-align: center;
+          //background-color: #aa3322;
+          margin-top: 0;
+
+          h3 {
+            text-align: left;
+          }
+          p {
+            display: inline;
+            &:after {
+              content: ' - ';
+            }
+            &:last-child {
+
+              &:after {
+                content: '.';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

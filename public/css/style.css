@@ -1,0 +1,2263 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Normalize.scss settings
+   ========================================================================== */
+
+/**
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
+ */
+
+/* Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *  `em` units.
+ */
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Addresses styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *  Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *  and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *  `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *  Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ *  Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'slipstreamforward';
+  src: url(/fonts/slipstream_forward-webfont.woff2?2be3895871fdae673eeb4dc4ef0886de) format("woff2"), url(/fonts/slipstream_forward-webfont.woff?1e1197c22e6a8a1e66eab5e70dbab2b0) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arialbold_italic';
+  src: url(/fonts/arialbi-webfont.woff2?9c0e2e2f486a589cae8f38638d578b9a) format("woff2"), url(/fonts/arialbi-webfont.woff?7a69e6d44f3dc174c93da1baec039b14) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rageItalic';
+  src: url(/fonts/RageItalic.ttf?c713fd0df31cf4e5f8e4f09e92698c6d) format("ttf"), url(/fonts/RageItalic.woff?89bae525ffc389e4d928f35d6afc5634) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+
+header .container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+header .container .headerLogo {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: .8rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 4px solid #0033ff;
+  text-align: center;
+  z-index: 10;
+}
+
+header .container .headerLogo a {
+  text-decoration: none;
+  color: #ff0d00;
+}
+
+header .container .headerLogo .logo,
+header .container .headerLogo section.serviceMkt .serviceMktRow .mktService .descriptionService h2,
+section.serviceMkt .serviceMktRow .mktService .descriptionService header .container .headerLogo h2 {
+  font-size: 3em;
+  font-family: 'slipstreamforward';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ff0d00;
+  margin: 0;
+}
+
+header .container .headerLogo p {
+  font-size: 0.9em;
+  font-family: 'arialbold_italic';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #0033ff;
+  margin: 0;
+  margin-top: -.5em;
+}
+
+header .container nav {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: white;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+@media (min-width: 40em) and (max-width: 64.27em) {
+  header .container nav {
+    width: 23rem;
+    min-height: 100%;
+  }
+}
+
+header .container nav .navContainer {
+  text-decoration: none;
+  background: white;
+  cursor: pointer;
+}
+
+header .container nav .navContainer ul {
+  list-style: none;
+  margin-top: 6rem;
+  padding: .4rem 0;
+}
+
+header .container nav .navContainer ul li {
+  padding: 1rem;
+  text-align: center;
+}
+
+header .container nav .navContainer ul li:nth-child(odd) {
+  background: #d8dade;
+}
+
+header .container nav .navContainer ul li:hover {
+  background: #c0c0c0;
+  color: #ff0d00;
+}
+
+header .container nav .navContainer ul li a {
+  text-decoration: none;
+}
+
+header .container nav .navContainer .menuServicos {
+  position: relative;
+  display: none;
+  padding: 0;
+}
+
+header .container nav .navContainer .menuServicos a {
+  margin-top: .5rem;
+  background: white;
+  padding: .8rem;
+  text-decoration: none;
+  display: block;
+}
+
+header .container nav .navContainer .menuRedeSocial {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+header .container nav .navContainer .menuRedeSocial .iconRedes a {
+  text-indent: -99999px;
+}
+
+header .container nav .navContainer .menuRedeSocial .iconRedes a:hover {
+  opacity: .5;
+}
+
+header .container nav .navContainer .menuRedeSocial .instagram,
+header .container nav .navContainer .menuRedeSocial .facebook,
+header .container nav .navContainer .menuRedeSocial .twitter,
+header .container nav .navContainer .menuRedeSocial .whatsapp {
+  text-indent: -99999px;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  padding: .3rem;
+  background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
+  vertical-align: middle;
+}
+
+header .container nav .navContainer .menuRedeSocial .facebook {
+  background: url(/fonts/facebook.svg?224f421d31a89d751a9f620b1254aaf3) no-repeat center 100%;
+}
+
+header .container nav .navContainer .menuRedeSocial .twitter {
+  background: url(/fonts/twitter.svg?6d37f19ae59ab11da173841cf057bdcd) no-repeat center 100%;
+}
+
+header .container nav .navContainer .menuRedeSocial .whatsapp {
+  background: url(/fonts/whatsapp.svg?d6631d67f744c8ed4e36a425c54c347a) no-repeat center 100%;
+}
+
+header .container .open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+header .triggerMenu {
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  background: url(/fonts/iconMenu.svg?56aca443f93bc8d7b9cc9dffcc57cc60) no-repeat center;
+  left: 5%;
+  top: 6.5rem;
+  z-index: 14;
+  text-indent: -9999px;
+}
+
+header .menuShow {
+  left: 0;
+}
+
+@media (min-width: 64.28em) {
+  header {
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 4px solid #0033ff;
+    text-align: left;
+  }
+
+  header .container {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  header .container .headerLogo {
+    background: none;
+    border-bottom: none;
+    width: 15.25423729%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  header .container .headerLogo p {
+    font-size: .75rem;
+  }
+
+  header .container nav {
+    width: 83.05084746%;
+    float: right;
+    margin-right: 0;
+    background-color: transparent;
+    position: static;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: 100%;
+  }
+
+  header .container nav .navContainer {
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  header .container nav .navContainer ul {
+    padding: 1rem 0;
+    height: 100%;
+    margin-top: .7rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header .container nav .navContainer ul:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  header .container nav .navContainer ul li {
+    width: 18.36734694%;
+    float: left;
+    margin-right: 2.04081633%;
+    padding: 0;
+  }
+
+  header .container nav .navContainer ul li:nth-child(odd) {
+    background-color: transparent;
+  }
+
+  header .container nav .navContainer ul li:hover {
+    background-color: transparent;
+    color: #ff0d00;
+  }
+
+  header .container nav .navContainer ul li:last-child {
+    width: 18.36734694%;
+    float: right;
+    margin-right: 0;
+  }
+
+  header .container nav .navContainer .menuRedeSocial {
+    display: none;
+  }
+
+  header .triggerMenu {
+    display: none;
+  }
+}
+
+section.slideComponent {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.slideWrap {
+  height: 100%;
+}
+
+.slideWrap #fullscreen {
+  height: 100%;
+  background: none;
+  color: white;
+}
+
+.slideWrap .slideBlock {
+  width: 100%;
+}
+
+.slideWrap .slideBlock .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideWrap .slideBlock .slider .slide {
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  float: left;
+  position: absolute;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent {
+  width: 80%;
+  float: left;
+  margin-right: 5.26315789%;
+  position: absolute;
+  top: 50%;
+  margin: 0 10%;
+  text-align: center;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent img {
+  margin-top: 5%;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent h1 {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin: 20px 0 30px 0;
+  padding: 0;
+  font-size: 3rem;
+  color: #0033ff;
+  font-weight: bold;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent h2 {
+  font-size: 2rem;
+  color: #ff0d00;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent .slideButton {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 0.3rem solid white;
+  border-radius: 25px;
+}
+
+.slideWrap .slideBlock .slider .slide .slidecontent .slideButton a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 64.28em) {
+  .slideWrap .slideBlock .slider .slide .slidecontent {
+    width: 80%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent img {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent img:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent h1 {
+    font-size: 7rem;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent h2 {
+    font-size: 3rem;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideButton {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideButton:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.slideWrap #slideposition {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  position: absolute;
+  bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+}
+
+.slideWrap #slideposition ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideWrap #slideposition ul li.indicator {
+  display: inline-block;
+  height: .8rem;
+  width: .8rem;
+  background: #222;
+  margin: 0 .75rem;
+  padding: 0;
+  border-radius: .8rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slideWrap #slideposition ul li.indicator.active {
+  background: white;
+}
+
+main {
+  background: url("/images/boxUp.jpg") no-repeat center;
+  background-size: cover;
+  overflow-y: scroll;
+  height: 36.42rem;
+}
+
+@media (min-width: 64.28em) {
+  main {
+    height: auto;
+    overflow-y: hidden;
+  }
+}
+
+main section.main {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(224, 4, 11, 0.7);
+  padding: 5%;
+  margin: 5%;
+}
+
+main section.main:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+main section.main .servicer {
+  position: relative;
+  height: 100%;
+}
+
+main section.main .servicer .pageService {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+main section.main .servicer .pageService:last-child {
+  margin-bottom: .9rem;
+}
+
+main section.main .servicer .pageService:last-child:after {
+  display: none;
+}
+
+main section.main .servicer .pageService .thumbnails {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2.63157895%;
+}
+
+main section.main .servicer .pageService .thumbnails picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 20% 0 20% 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 5px solid white;
+}
+
+main section.main .servicer .pageService .description {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #ff0d00;
+  color: white;
+  text-align: center;
+  border-radius: 0 20% 0 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  word-break: keep-all;
+  border-bottom: 5px solid white;
+}
+
+main section.main .servicer .pageService .description h2 {
+  font-size: 200%;
+  word-spacing: .5rem;
+}
+
+main section.main .servicer .pageService .description p {
+  padding: .5rem;
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+main section.main .servicer .pageService .divisor {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  left: 50%;
+  margin-left: -25%;
+  margin-top: 2rem;
+  content: '';
+  width: 50%;
+  height: 0.3rem;
+  background: white;
+  color: white;
+  border-bottom: 5px solid white;
+  border-radius: 5px;
+}
+
+main section.main .servicer .pageService .divisor:last-child {
+  background: #ff0d00;
+}
+
+@media (min-width: 40em) and (max-width: 64.27em) {
+  main section.main .servicer .pageService {
+    width: 47.36842105%;
+    float: left;
+    margin-right: 5.26315789%;
+  }
+
+  main section.main .servicer .pageService span {
+    display: none;
+  }
+
+  main section.main .servicer .pageService:nth-child(even) {
+    width: 47.36842105%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 64.28em) {
+  main section.main .servicer .pageService {
+    width: 23.72881356%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  main section.main .servicer .pageService span {
+    display: none;
+  }
+
+  main section.main .servicer .pageService:last-child {
+    width: 23.72881356%;
+    float: right;
+    margin-right: 0;
+  }
+
+  main section.main .servicer .pageService .description {
+    box-sizing: border-box;
+  }
+}
+
+main section.serviceMkt {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5rem;
+  background: white;
+}
+
+main section.serviceMkt .serviceMktRow {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.serviceMkt .serviceMktRow:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+main section.serviceMkt .serviceMktRow .mktService {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5rem;
+}
+
+main section.serviceMkt .serviceMktRow .mktService:after {
+  position: relative;
+  bottom: -2.7rem;
+  left: 50%;
+  margin-left: -25%;
+  content: '';
+  width: 50%;
+  height: 5px;
+  background: #ff0d00;
+}
+
+main section.serviceMkt .serviceMktRow .mktService:last-child {
+  margin-bottom: 0;
+}
+
+main section.serviceMkt .serviceMktRow .mktService:last-child:after {
+  display: none;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture {
+  padding: 10%;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+  width: 80%;
+  height: auto;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .descriptionService {
+  background: none;
+  color: #001881;
+  text-align: center;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+  font-size: 1.2rem;
+  margin-top: -1.1rem;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2,
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2,
+main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 {
+  font-family: 'slipstreamforward';
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.07142857rem;
+  color: #ff0d00;
+  padding: 0;
+  margin: 0;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span,
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2 span,
+main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 span {
+  font-family: 'RageItalic';
+  font-size: 5rem;
+  padding: 0;
+  margin: -10px 0;
+  right: 48px;
+  color: #001881;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3,
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3,
+main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 {
+  text-align: center;
+  margin-top: -2.5rem;
+  font-size: 1.1rem;
+  padding: 0;
+  color: #001881;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span,
+main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3 span,
+main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 span {
+  font-size: 1.8rem;
+  font-family: 'RageItalic';
+  color: #ff0d00;
+  letter-spacing: 0.07142857rem;
+  margin-left: .3rem;
+  margin-top: -1rem;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .mktDescription {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .mktDescription:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #001881;
+}
+
+@media (min-width: 40em) and (max-width: 64.27em) {
+  main section.serviceMkt .serviceMktRow .mktService {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
+    width: 35.8974359%;
+    float: left;
+    margin-right: 2.56410256%;
+    margin-top: 1.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+    width: 80%;
+    height: auto;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+    padding: 4% 0;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+    font-size: 2.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+    font-size: 1.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+    width: 100%;
+    float: left;
+    margin-right: 2.56410256%;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+    margin-left: .4rem;
+    margin-top: -55px;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .mktDescription {
+    width: 35.8974359%;
+    float: right;
+    margin-right: 0;
+    padding: .3rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #001881;
+  }
+}
+
+@media (min-width: 64.28em) {
+  main section.serviceMkt .serviceMktRow .mktService {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
+    width: 35.8974359%;
+    float: left;
+    margin-right: 2.56410256%;
+    margin-top: 1.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+    width: 80%;
+    height: auto;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+    padding: 4% 0;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+    font-size: 2.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+    font-size: 1.6rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+    width: 100%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
+  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
+  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+    margin-left: .4rem;
+    margin-top: -55px;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .mktDescription {
+    width: 35.8974359%;
+    float: right;
+    margin-right: 0;
+    padding: .3rem;
+  }
+
+  main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #001881;
+  }
+}
+
+/*
+
+.content-bar {
+  padding: 0 10px;
+
+  margin-top: gutter();
+
+  div:nth-child(1) {
+    @include span(6 of 12);
+
+    //@include  gutters(3em inside);
+
+    @include  breakpoint((max-width 40em)){
+      @include span(12 of 12);
+    }
+  }
+
+  div:nth-child(2) {
+    @include span(last 6 of 12);
+
+    @include breakpoint((max-width 40em)) {
+      @include span(12 of 12);
+    }
+  }
+}
+
+
+<section class="servicer">
+
+<!-- services Frota Própria-->
+<div class="pageService">
+<div class="thumbnails">
+<img src="assets/img/DSC_0357.jpg" alt="Frota Própria">
+</div>
+<div class="description">
+<h2>Frota Própria</h2>
+<p>
+ Nossos veículos são revisados e equipados para oeferece serviços especializados.
+ Contamos com caminhão baú e Kombi Carroceria.
+</p>
+</div>
+
+</div>
+</section>
+
+*/
+
+section.serviceMkt {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 5rem;
+  background: white;
+}
+
+section.serviceMkt .serviceMktRow {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.serviceMkt .serviceMktRow:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+section.serviceMkt .serviceMktRow .mktService {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5rem;
+}
+
+section.serviceMkt .serviceMktRow .mktService:after {
+  position: relative;
+  bottom: -2.7rem;
+  left: 50%;
+  margin-left: -25%;
+  content: '';
+  width: 50%;
+  height: 5px;
+  background: #ff0d00;
+}
+
+section.serviceMkt .serviceMktRow .mktService:last-child {
+  margin-bottom: 0;
+}
+
+section.serviceMkt .serviceMktRow .mktService:last-child:after {
+  display: none;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture {
+  padding: 10%;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+  width: 80%;
+  height: auto;
+}
+
+section.serviceMkt .serviceMktRow .mktService .descriptionService {
+  background: none;
+  color: #001881;
+  text-align: center;
+}
+
+section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+  font-size: 1.2rem;
+  margin-top: -1.1rem;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2,
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2,
+section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 {
+  font-family: 'slipstreamforward';
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.07142857rem;
+  color: #ff0d00;
+  padding: 0;
+  margin: 0;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span,
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2 span,
+section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 span {
+  font-family: 'RageItalic';
+  font-size: 5rem;
+  padding: 0;
+  margin: -10px 0;
+  right: 48px;
+  color: #001881;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3,
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3,
+section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 {
+  text-align: center;
+  margin-top: -2.5rem;
+  font-size: 1.1rem;
+  padding: 0;
+  color: #001881;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span,
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3 span,
+section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 span {
+  font-size: 1.8rem;
+  font-family: 'RageItalic';
+  color: #ff0d00;
+  letter-spacing: 0.07142857rem;
+  margin-left: .3rem;
+  margin-top: -1rem;
+}
+
+section.serviceMkt .serviceMktRow .mktService .mktDescription {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  float: left;
+  margin-right: 5.26315789%;
+}
+
+section.serviceMkt .serviceMktRow .mktService .mktDescription:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #001881;
+}
+
+@media (min-width: 40em) and (max-width: 64.27em) {
+  section.serviceMkt .serviceMktRow .mktService {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
+    width: 35.8974359%;
+    float: left;
+    margin-right: 2.56410256%;
+    margin-top: 1.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+    width: 80%;
+    height: auto;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+    padding: 4% 0;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+    font-size: 2.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+    font-size: 1.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+    width: 100%;
+    float: left;
+    margin-right: 2.56410256%;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
+  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+    margin-left: .4rem;
+    margin-top: -55px;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .mktDescription {
+    width: 35.8974359%;
+    float: right;
+    margin-right: 0;
+    padding: .3rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #001881;
+  }
+}
+
+@media (min-width: 64.28em) {
+  section.serviceMkt .serviceMktRow .mktService {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
+    width: 35.8974359%;
+    float: left;
+    margin-right: 2.56410256%;
+    margin-top: 1.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+    width: 80%;
+    height: auto;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+    padding: 4% 0;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+    font-size: 2.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+    font-size: 1.6rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
+  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
+    width: 100%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
+  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+    margin-left: .4rem;
+    margin-top: -55px;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .mktDescription {
+    width: 35.8974359%;
+    float: right;
+    margin-right: 0;
+    padding: .3rem;
+  }
+
+  section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #001881;
+  }
+}
+
+.testimonials-section {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #ff0d00;
+}
+
+.testimonials-section .testimonials-wrapper {
+  position: relative;
+  background: rgba(204, 10, 0, 0.9);
+  margin: 2rem 2rem;
+  z-index: 1;
+}
+
+.testimonials-section .testimonials-wrapper::after {
+  top: 2rem;
+  left: 0;
+  font-family: "Georgia", serif;
+  color: white;
+}
+
+.testimonials-section .testimonials-wrapper .testimonials-content {
+  padding: 5%;
+}
+
+.testimonials-section .testimonials-wrapper .testimonials-content p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+.testimonials-section .testimonials-wrapper ul {
+  color: #ffffff;
+  text-align: center;
+  list-style: none;
+}
+
+.testimonials-section .testimonials-wrapper ul li {
+  position: absolute;
+  opacity: 0;
+}
+
+.testimonials-section .testimonials-wrapper ul li:first-child {
+  position: relative;
+  opacity: 1;
+}
+
+.testimonials-section .testimonials-wrapper ul li p {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  padding: 0 14px;
+}
+
+.testimonials-section .testimonials-wrapper ul li .author img,
+.testimonials-section .testimonials-wrapper ul li .author .cd-author-info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.testimonials-section .testimonials-wrapper ul li .author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-section .testimonials-wrapper ul li .author .author-info {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.testimonials-section .testimonials-wrapper ul li .author .author-info li:last-child {
+  color: white;
+}
+
+.flex-direction-nav li {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+}
+
+.flex-direction-nav li:first-child {
+  left: 0;
+}
+
+.flex-direction-nav li:last-child {
+  right: 0;
+}
+
+.flex-direction-nav li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.no-touch .flex-direction-nav li a:hover {
+  background-color: #323234;
+}
+
+.flex-direction-nav li a::before,
+.flex-direction-nav li a::after {
+  /* left and right arrows in css only */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 13px;
+  background-color: #ffffff;
+}
+
+.see-all {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #252527;
+  text-align: center;
+  text-transform: uppercase;
+  color: #6b6b70;
+  font-weight: 700;
+}
+
+.no-touch .see-all:hover {
+  color: #79b6e4;
+}
+
+footer {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #001881;
+  height: auto;
+  bottom: 0;
+}
+
+footer .footerContainer {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .footerContainer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+footer .footerContainer .footerMenu,
+footer .footerContainer .formasDePagamentos,
+footer .footerContainer .footerSocial,
+footer .footerContainer .footerContato {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+}
+
+footer .footerContainer .footerMenu h2,
+footer .footerContainer .formasDePagamentos h2,
+footer .footerContainer .footerSocial h2,
+footer .footerContainer .footerContato h2 {
+  text-transform: uppercase;
+}
+
+footer .footerContainer .footerMenu ul,
+footer .footerContainer .formasDePagamentos ul,
+footer .footerContainer .footerSocial ul,
+footer .footerContainer .footerContato ul {
+  text-decoration: none;
+}
+
+footer .footerContainer .footerMenu ul li,
+footer .footerContainer .formasDePagamentos ul li,
+footer .footerContainer .footerSocial ul li,
+footer .footerContainer .footerContato ul li {
+  list-style: none;
+}
+
+footer .footerContainer .footerMenu ul li a,
+footer .footerContainer .formasDePagamentos ul li a,
+footer .footerContainer .footerSocial ul li a,
+footer .footerContainer .footerContato ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footerContainer .footerMenu ul li a:hover,
+footer .footerContainer .formasDePagamentos ul li a:hover,
+footer .footerContainer .footerSocial ul li a:hover,
+footer .footerContainer .footerContato ul li a:hover {
+  color: #ff0d00;
+}
+
+footer .footerContainer .footerMenu ul li a:active,
+footer .footerContainer .formasDePagamentos ul li a:active,
+footer .footerContainer .footerSocial ul li a:active,
+footer .footerContainer .footerContato ul li a:active {
+  color: #0033ff;
+}
+
+footer .footerContainer .formasDePagamentos {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a {
+  text-indent: -99999px;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a:hover {
+  opacity: .5;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a:nth-child(1) {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  height: 2.70rem;
+  background: url(/fonts/masterCard.svg?51b7864f3c4f3f1eef8074be87af82fd) no-repeat center 100%;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a:nth-child(2) {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  height: 2.70rem;
+  background: url(/fonts/visaCard.svg?015e190023628676dfdb9075fc6a0d3f) no-repeat center 100%;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a:nth-child(3) {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  height: 2.70rem;
+  background: url(/fonts/dinnersCard.svg?63ed69f86aa683ce09718f4116e4add1) no-repeat center 100%;
+}
+
+footer .footerContainer .formasDePagamentos .iconCard a:last-child {
+  width: 21.05263158%;
+  float: right;
+  margin-right: 0;
+  height: 2.70rem;
+  background: url(/fonts/hiperCard.svg?18b5e90bebe75a31182c4a6587022544) no-repeat center 100%;
+}
+
+footer .footerContainer .footerSocial {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer .footerContainer .footerSocial .iconRedes a {
+  text-indent: -99999px;
+}
+
+footer .footerContainer .footerSocial .iconRedes a:hover {
+  opacity: .5;
+}
+
+footer .footerContainer .footerSocial .iconRedes .instagram,
+footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .facebook,
+header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .facebook,
+footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .twitter,
+header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .twitter,
+footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .whatsapp,
+header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .whatsapp,
+footer .footerContainer .footerSocial .iconRedes .facebook,
+footer .footerContainer .footerSocial .iconRedes .twitter,
+footer .footerContainer .footerSocial .iconRedes .whatsapp {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  height: 2.70rem;
+  background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
+}
+
+footer .footerContainer .footerSocial .iconRedes .facebook {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  background: url(/fonts/facebook.svg?224f421d31a89d751a9f620b1254aaf3) no-repeat center 100%;
+}
+
+footer .footerContainer .footerSocial .iconRedes .twitter {
+  width: 21.05263158%;
+  float: left;
+  margin-right: 5.26315789%;
+  background: url(/fonts/twitter.svg?6d37f19ae59ab11da173841cf057bdcd) no-repeat center 100%;
+}
+
+footer .footerContainer .footerSocial .iconRedes .whatsapp {
+  width: 21.05263158%;
+  float: right;
+  margin-right: 0;
+  background: url(/fonts/whatsapp.svg?d6631d67f744c8ed4e36a425c54c347a) no-repeat center 100%;
+}
+
+footer .footerContainer .footerContato span {
+  display: block;
+}
+
+@media (min-width: 40em) and (max-width: 64.27em) {
+  footer .footerContainer {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer .footerContainer:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  footer .footerContainer .footerMenu,
+  footer .footerContainer .formasDePagamentos,
+  footer .footerContainer .footerSocial,
+  footer .footerContainer .footerContato {
+    width: 35.8974359%;
+    float: left;
+    margin-right: 2.56410256%;
+  }
+
+  footer .footerContainer .footerMenu ul li,
+  footer .footerContainer .formasDePagamentos ul li,
+  footer .footerContainer .footerSocial ul li,
+  footer .footerContainer .footerContato ul li {
+    margin-bottom: 5%;
+  }
+
+  footer .footerContainer .formasDePagamentos {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+  }
+
+  footer .footerContainer .footerSocial {
+    width: 61.53846154%;
+    float: right;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  footer .footerContainer .footerContato {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  footer .footerContainer .footerContato .fones {
+    text-align: center;
+  }
+
+  footer .footerContainer .footerContato .fones span {
+    display: inline;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+
+  footer .footerContainer .footerContato .fones span:after {
+    content: ' | ';
+  }
+
+  footer .footerContainer .footerContato .fones span:nth-child(4):after {
+    content: '';
+  }
+
+  footer .footerContainer .footerContato .fones .email p {
+    font-weight: 400;
+    text-align: center;
+  }
+
+  footer .footerContainer .footerContato .enderecos {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  footer .footerContainer .footerContato .enderecos h3 {
+    text-align: left;
+  }
+
+  footer .footerContainer .footerContato .enderecos p {
+    display: inline;
+  }
+
+  footer .footerContainer .footerContato .enderecos p:after {
+    content: ' - ';
+  }
+
+  footer .footerContainer .footerContato .enderecos p:last-child:after {
+    content: '.';
+  }
+}
+
+@media (min-width: 64.28em) {
+  footer .footerContainer {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer .footerContainer:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  footer .footerContainer .footerMenu,
+  footer .footerContainer .formasDePagamentos,
+  footer .footerContainer .footerSocial,
+  footer .footerContainer .footerContato {
+    width: 15.25423729%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  footer .footerContainer .formasDePagamentos {
+    width: 40.6779661%;
+    float: left;
+    margin-right: 1.69491525%;
+  }
+
+  footer .footerContainer .footerSocial {
+    width: 40.6779661%;
+    float: right;
+    margin-right: 0;
+  }
+
+  footer .footerContainer .footerContato {
+    width: 80%;
+    float: left;
+    margin-right: 1.69491525%;
+    margin-top: 1rem;
+    line-height: .2rem;
+  }
+
+  footer .footerContainer .footerContato .fones {
+    text-align: center;
+  }
+
+  footer .footerContainer .footerContato .fones span {
+    display: inline;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+
+  footer .footerContainer .footerContato .fones span:after {
+    content: ' | ';
+  }
+
+  footer .footerContainer .footerContato .fones span:nth-child(4):after {
+    content: '';
+  }
+
+  footer .footerContainer .footerContato .fones .email p {
+    font-weight: 400;
+    text-align: center;
+  }
+
+  footer .footerContainer .footerContato .enderecos {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  footer .footerContainer .footerContato .enderecos h3 {
+    text-align: left;
+  }
+
+  footer .footerContainer .footerContato .enderecos p {
+    display: inline;
+  }
+
+  footer .footerContainer .footerContato .enderecos p:after {
+    content: ' - ';
+  }
+
+  footer .footerContainer .footerContato .enderecos p:last-child:after {
+    content: '.';
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
