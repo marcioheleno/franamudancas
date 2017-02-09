@@ -1,151 +1,158 @@
 main {
-  @include layout($gMobile);
+  //@include layout($gMobile);
   background: url("/images/boxUp.jpg") no-repeat center;
   background-size: cover;
-  overflow-y: scroll;
-  height: 36.42rem;
+  //overflow-y: scroll;
+  height: auto;
+  margin: 0;
 
-  @include susy-breakpoint(64.28em, $gDesk) {
-    height: auto;
+  //@include susy-breakpoint(64.28em, $gDesk) {
+  @media screen and (max-width:64.28em) {
+    //height: auto;
+    background-size: 100%;
+    background-position: top center;
     overflow-y: hidden;
   }
+}
 
-  section.main {
-    @include container(80%);
-    background-color: rgba(224,4,11, 0.7);
-    padding: 5%;
-    margin: 5%;
-    .servicer {
-      position: relative;
+section.main {
+  //@include container(80%);
+  background-color: rgba(224,4,11, 0.7);
+  padding: 5%;
+  //margin: 5%;
+
+  .servicer {
+    position: relative;
+    height: 100%;
+
+    .pageService {
+      //@include span(4 of 4);
       height: 100%;
+      margin-bottom: 2rem;
 
-      .pageService {
-        @include span(4 of 4);
-        height: 100%;
-        margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: .9rem;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      // thumbnails
+      .thumbnails {
+        //@include full;
+        margin-bottom: span(.3);
+
+        picture {
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 20% 0 20% 0;
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            border-bottom: 5px solid white;
+          }
+        }
+      }
+
+      .description {
+        //@include full;
+        background: $colorTertiary;
+        color: $colorPrimary;
+        text-align: center;
+        border-radius: 0 20% 0 20%;
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        word-break: keep-all;
+        border-bottom: 5px solid white;
+
+
+
+        h2 {
+          font-size: 200%;
+          word-spacing: .5rem;
+        }
+
+        p {
+          padding: .5rem;
+          font-size: 100%;
+          line-height: 1.2;
+        }
+      }
+      .divisor {
+        //@include full;
+        position: relative;
+        left: 50%;
+        margin-left: -25%;
+        margin-top: 2rem ;
+        content: '';
+        width: 50% ;
+        height: 0.3rem;
+        background: $colorPrimary;
+        color: $colorPrimary;
+        border-bottom: 5px solid white;
+        border-radius: 5px;
 
         &:last-child {
-          margin-bottom: .9rem;
-
-          &:after {
-            display: none;
-          }
-        }
-
-        // thumbnails
-        .thumbnails {
-          @include full;
-          margin-bottom: span(.3);
-
-          picture {
-            img {
-              width: 100%;
-              height: auto;
-              border-radius: 20% 0 20% 0;
-              -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-              border-bottom: 5px solid white;
-            }
-          }
-        }
-
-        .description {
-          @include full;
+          //display: none;
           background: $colorTertiary;
-          color: $colorPrimary;
-          text-align: center;
-          border-radius: 0 20% 0 20%;
-          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          word-break: keep-all;
-          border-bottom: 5px solid white;
-
-
-
-          h2 {
-            font-size: 200%;
-            word-spacing: .5rem;
-          }
-
-          p {
-            padding: .5rem;
-            font-size: 100%;
-            line-height: 1.2;
-          }
         }
-        .divisor {
-          @include full;
-          position: relative;
-          left: 50%;
-          margin-left: -25%;
-          margin-top: 2rem ;
-          content: '';
-          width: 50% ;
-          height: 0.3rem;
-          background: $colorPrimary;
-          color: $colorPrimary;
-          border-bottom: 5px solid white;
-          border-radius: 5px;
-
-          &:last-child {
-            //display: none;
-            background: $colorTertiary;
-          }
-        }
-
-        @include susy-breakpoint(40em 64.27em, $gMedium) {
-
-          @include span(2 of 4);
-
-          span{
-            display: none;
-          }
-          &:nth-child(even) {
-            @include span(last 2 of 4);
-          }
-          .description {
-
-          }
-
-        } // breackpoint 40em 8 coluns
-
-        @include susy-breakpoint(64.28em, $gDesk) {
-
-          @include span(3 of 12);
-
-          span{
-            display: none;
-          }
-          &:last-child {
-            @include span(last 3 of 12);
-          }
-          .description {
-            box-sizing: border-box;
-          }
-
-        } // breackpoint 40em 8 coluns
-
-        //.pageService
       }
-      //.service
+
+      //@include susy-breakpoint(40em 64.27em, $gMedium) {
+      @media screen and (max-width:64.28em) {
+
+        //@include span(2 of 4);
+
+        span{
+          display: none;
+        }
+        &:nth-child(even) {
+          //@include span(last 2 of 4);
+        }
+        .description {
+
+        }
+
+      } // breackpoint 40em 8 coluns
+
+      //@include susy-breakpoint(64.28em, $gDesk) {
+      @media screen and (max-width:64.28em) {
+
+        //@include span(3 of 12);
+
+        span{
+          display: none;
+        }
+        &:last-child {
+          //@include span(last 3 of 12);
+        }
+        .description {
+          box-sizing: border-box;
+        }
+
+      } // breackpoint 40em 8 coluns
+
+      //.pageService
     }
-  //  section
+    //.service
   }
 
-  section.serviceMkt {
-    @include full;
+
+  .serviceMkt {
+    //@include full;
     margin-bottom: 5rem;
     background: $colorPrimary;
     //@extend .servicer;
 
     .serviceMktRow {
-      @include container(80%);
+      //@include container(80%);
 
       .mktService {
-        @include span(4 of 4);
+        //@include span(4 of 4);
 
         margin-top: 5rem;
         //margin: span(2);
@@ -190,7 +197,7 @@ main {
           text-align: center;
 
           h2 {
-            @extend .logo;
+            //@extend .logo;
             font-size: 2rem;
             text-transform: uppercase;
           }
@@ -203,10 +210,10 @@ main {
         } //.descriptionService
 
         .thumbnailsLogo {
-          @include container(100%);
+          //@include container(100%);
 
           .logo {
-            @include span(100%);
+            //@include span(100%);
 
             h2 {
               font-family: 'slipstreamforward';
@@ -249,8 +256,8 @@ main {
         }//thumbnailsLogo
 
         .mktDescription {
-          @include container(100%);
-          @include span(100%);
+          //@include container(100%);
+          //@include span(100%);
 
           h3 {
             text-align: center;
@@ -261,13 +268,14 @@ main {
         }//.mktDescription
 
 
-        @include susy-breakpoint(40em 64.27em, $gMedium) {
-          @include container(100%);
+        //@include susy-breakpoint(40em 64.27em, $gMedium) {
+        @media screen and (max-width:64.28em) {
+          //@include container(100%);
           //background-color: #00b3ff;
           //@include span(8 of 8);
 
           .thumbnailsService {
-            @include span(first 3 of 8);
+            //@include span(first 3 of 8);
             margin-top: 1.6rem;
 
             picture {
@@ -280,7 +288,7 @@ main {
             }
           }
           .descriptionService {
-            @include span(last 5 of 8);
+            //@include span(last 5 of 8);
             padding: 4% 0;
 
             h2{
@@ -291,10 +299,10 @@ main {
             }
           }
           .thumbnailsLogo{
-            @include span(last 5 of 8);
+            //@include span(last 5 of 8);
 
             .logo {
-              @include span(100%);
+              //@include span(100%);
 
               span {
                 margin-left: .4rem;
@@ -305,7 +313,7 @@ main {
           }//.thumbnailsLogo
 
           .mktDescription {
-            @include span(last 3 of 8);
+            //@include span(last 3 of 8);
             padding: .3rem;
             //@include container(100%);
             //@include span(100%);
@@ -319,13 +327,14 @@ main {
           }//.mktDescription
         } // susy-breakpoint(40em, $gMedium)
 
-        @include susy-breakpoint(64.28em, $gDesk) {
-          @include container(100%);
+        //@include susy-breakpoint(64.28em, $gDesk) {
+        @media screen and (max-width:64.28em) {
+          //@include container(100%);
           //background-color: #00b3ff;
           //@include span(8 of 8);
 
           .thumbnailsService {
-            @include span(first 3 of 8);
+            //@include span(first 3 of 8);
             margin-top: 1.6rem;
 
             picture {
@@ -338,7 +347,7 @@ main {
             }
           }
           .descriptionService {
-            @include span(last 5 of 8);
+            //@include span(last 5 of 8);
             padding: 4% 0;
 
             h2{
@@ -349,10 +358,10 @@ main {
             }
           }
           .thumbnailsLogo{
-            @include span(last 5 of 8);
+            //@include span(last 5 of 8);
 
             .logo {
-              @include span(100%);
+              //@include span(100%);
 
               span {
                 margin-left: .4rem;
@@ -363,7 +372,7 @@ main {
           }//.thumbnailsLogo
 
           .mktDescription {
-            @include span(last 3 of 8);
+            //@include span(last 3 of 8);
             padding: .3rem;
             //@include container(100%);
             //@include span(100%);
@@ -380,10 +389,7 @@ main {
     }//.serviceMktRow
   }//section.serviceMkt
 
-
-  //main
-
-
+  //  section
 }
 /*
 

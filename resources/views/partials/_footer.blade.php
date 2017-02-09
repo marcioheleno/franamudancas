@@ -15,17 +15,18 @@
         </div>
         <!--footerSocial-->
         <div class="footerContato">
-            <h2>Contato:</h2>
             <div class="fones">
+                <h2>Contato:</h2>
                 <span>(85) 3290.1204</span>
                 <span>(85) 3290.3578</span>
                 <span>(85) 98840.1204</span>
                 <span>(85) 99969.9051</span>
             </div>
-            <h2>Email:</h2>
+
             <div class="email">
-                <p>franamudancas@gmail.com</p>
-                <p>contato@franamudancas.com.br</p>
+                <h2>Email:</h2>
+                <span>franamudancas@gmail.com</span>
+                <span>contato@franamudancas.com.br</span>
             </div>
             <!-- fones -->
             <div class="enderecos">
@@ -41,10 +42,10 @@
         <div class="formasDePagamentos">
             <h2>Formas de Pagamento</h2>
             <div class="iconCard">
-                <a href="#">MasterCard</a>
-                <a href="#">VisaCard</a>
-                <a href="#">DinnerCard</a>
-                <a href="#">HiperCard</a>
+                <span>MasterCard</span>
+                <span>VisaCard</span>
+                <span>DinnerCard</span>
+                <span>HiperCard</span>
             </div>
         </div>
         <!--formasDePagamento-->
@@ -59,8 +60,8 @@
             </div>
         </div>
 
-        <div class="logo">
-            <img src="/images/frana-logo-26anos.svg" alt="Logo Frana 26 anos">
+        <div class="logoFooter">
+            <img src="/images/franaLogo_b.svg" alt="Logo Frana 26 anos">
             <p>© 2016 - Frana Mudanças - Direitos Reservados</p>
         </div><!--logo-->
     </div><!--footerContainer-->

@@ -1,16 +1,15 @@
 footer{
-  @include span(full);
+  //@include span(full);
   background: $colorAzul;
   height: auto;
   //position: fixed;
   bottom: 0;
+  color: $colorPrimary;
 
   .footerContainer{
-    @include container(80%);
+    //@include container(80%);
 
     .footerMenu{
-      @include span(4 of 4);
-      color: $colorPrimary;
 
       h2 {
         text-transform: uppercase;
@@ -38,7 +37,7 @@ footer{
     } //footerMenu
 
     .footerContato {
-      @extend .footerMenu;
+      //@extend .footerMenu;
       span {
         display: block;
       }
@@ -46,14 +45,14 @@ footer{
     }
 
     .formasDePagamentos {
-      @include span(full);
+      //@include span(full);
       //background: pink;
-      @extend .footerMenu;
+      //@extend .footerMenu;
 
       .iconCard{
         //@extend
 
-        a{
+        span{
           text-indent: -99999px;
           //border-radius: .5rem;
 
@@ -62,23 +61,23 @@ footer{
           }
 
           &:nth-child(1){
-            @include span(1 of 4);
+            //@include span(1 of 4);
             height: 2.70rem;
             background: url("../images/masterCard.svg") no-repeat center 100%;
 
           }
           &:nth-child(2){
-            @include span(1 of 4);
+            //@include span(1 of 4);
             height: 2.70rem;
             background: url("../images/visaCard.svg") no-repeat center 100%;
           }
           &:nth-child(3){
-            @include span(1 of 4);
+            //@include span(1 of 4);
             height: 2.70rem;
             background: url("../images/dinnersCard.svg") no-repeat center 100%;
           }
           &:last-child{
-            @include span(last 1 of 4);
+            //@include span(last 1 of 4);
             height: 2.70rem;
             background: url("../images/hiperCard.svg") no-repeat center 100%;
           }
@@ -87,9 +86,7 @@ footer{
     }
 
     .footerSocial {
-      @include span(full);
-      //background: pink;
-      @extend .footerMenu;
+      //@extend .footerMenu;
       //@include container(4);
 
       .iconRedes {
@@ -106,7 +103,7 @@ footer{
           }
         }
         .instagram {
-          @include span(1 of 4);
+          //@include span(1 of 4);
           //text-indent: -99999px;
           //width: 24%;
           height: 2.70rem;
@@ -114,136 +111,167 @@ footer{
           background: url("../images/instagram.svg") no-repeat center 100%;
         }
         .facebook {
-          @extend .instagram;
-          @include span(1 at 2 of 4);
+          //@extend .instagram;
+          //@include span(1 at 2 of 4);
           background: url("../images/facebook.svg") no-repeat center 100%;
         }
         .twitter {
-          @extend .instagram;
-          @include span(1 at 3 of 4);
+          //@extend .instagram;
+          //@include span(1 at 3 of 4);
           background: url("../images/twitter.svg") no-repeat center 100%;
         }
         .whatsapp {
-          @extend .instagram;
-          @include span(last 1 of 4);
+          //@extend .instagram;
+          //@include span(last 1 of 4);
           background: url("../images/whatsapp.svg") no-repeat center 100%;
         }
-      }
+      } // .iconRedes
     }
 
-    .logo{
+    .logoFooter{
+      //@extend .footerMenu;
+      //@include container(full);
+
+      img {
+        //@include container(70%);
+        display: block;
+      }
+
       p{
         color: $colorPrimary;
-        margin-top: - 2rem;
+        //margin-top: -0.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
       }
-
-    }
-
-
-  }
-
-  @include susy-breakpoint(40em 64.27em, $gMedium) {
-    //@include container(100%);
-    .footerContainer{
-      @include container(80%);
-
-      .footerMenu {
-        @include span(3 of 8);
-
-        ul {
-          li{
-            margin-bottom: 5%;
-            //background-color: #d8dade;
-          }
+      //@include susy-breakpoint(29.12em) {
+      @media screen and (max-width:29.12em) {
+        margin-top: 1rem;
+        img {
+          //@include container(25%);
+          float: left;
+          margin-left: .5rem;
+        }
+        p {
+          font-size:90%;
+          word-spacing: -.4rem;
+          //margin-top: .2rem;
         }
       }
+    }
+  } //footerContainer mobile
 
-      .formasDePagamentos {
-        @include span(last 5 of 8);
-        //background-color: yellow;
-        //margin-bottom: 1rem;
+  //@include susy-breakpoint(40em 64.27em, $gMedium) {
+  @media screen and (max-width:64.28em) {
+    //@include container(100%);
+    background-color: #4cae4c;
+    .footerMenu {
+      //@include span(4 of 8);
+
+      ul {
+        li{
+          margin-bottom: 5%;
+          //background-color: #d8dade;
+        }
       }
+    } //footerMenu
 
-      .footerSocial {
-        @include span(last 5 of 8);
+    .footerContato {
+      //@include span(4 of 8);
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      h2 {
+        margin: 1rem 0;
+      }
+      .fones {
+
+        span {
+          display: inline;
+          margin-bottom: 0;
+
+          &:after {
+            content: ' - ';
+          }
+
+          &:nth-child(4) {
+            &:after {
+              content: '';
+            }
+          }
+        }
+        //span
+      } //fones
+      .email {
+        span {
+          font-weight: 400;
+        }
+      } //email
+      .enderecos {
+        //@include span(full);
         //background-color: #aa3322;
         margin-bottom: 1rem;
-      }
-      .footerContato {
-        @include span(full);
-        //background-color: #cc6633;
 
-        .fones {
-          //white-space: nowrap;
-          text-align: center;
-
-          span{
-            display: inline;
-            text-align: justify;
-            margin-bottom: 0;
+        p {
+          display: inline;
+          &:after {
+            content: ' - ';
+          }
+          &:last-child {
 
             &:after {
-              content: ' | ';
-            }
-
-            &:nth-child(4) {
-              &:after {
-                content: '';
-              }
-            }
-          }
-          .email {
-
-            p {
-              font-weight: 400;
-              text-align: center;
-              //background-color: #0033ff;
+              content: '.';
             }
           }
         }
-        .enderecos {
-          @include span(full);
-          text-align: center;
-          //background-color: #aa3322;
-          margin-bottom: 1rem;
+      } //enderecos
+    } //.footerContato
 
-          h3 {
-            text-align: left;
-          }
-          p {
-            display: inline;
-            &:after {
-              content: ' - ';
-            }
-            &:last-child {
+    .formasDePagamentos {
+      //@include span(4 of 8);
+      background-color: yellow;
+      //margin-bottom: 1rem;
+    } // formasDePagamentos
 
-              &:after {
-                content: '.';
-              }
-            }
-          }
-        }
+    .footerSocial {
+      //@include span(4 of 8);
+      background-color: #aa3322;
+      margin-bottom: 1rem;
+    } //footerSocial
+
+
+    .logo{
+      //@include container(100%);
+      display: inline;
+      //@extend .footerMenu;
+
+      img {
+        width: 5rem;
+        float: left;
+        //text-align: center;
       }
     }
   } // breackpoint 40em 8 coluns
 
-  @include susy-breakpoint(64.28em, $gDesk) {
+  //@include susy-breakpoint(64.28em, $gDesk) {
+  @media screen and (max-width:64.28em) {
     //background-color: #222222;
     .footerContainer {
-      @include container(80%);
+      //@include container(80%);
 
       .footerMenu {
-        @include span(2 of 12);
+        //@include span(2 of 12);
       }
       .formasDePagamentos {
-        @include span(5 of 12);
+        //@include span(5 of 12);
       }
       .footerSocial {
         //@include container(100%);
-        @include span(last 5 of 12);
+        //@include span(last 5 of 12);
       }
+
       .footerContato {
-        @include span(80%);
+        //@include span(80%);
         margin-top: 1rem;
         //background-color: #cc6633;
         line-height: .2rem;
@@ -277,7 +305,7 @@ footer{
           }
         }
         .enderecos {
-          @include span(full);
+          //@include span(full);
           text-align: center;
           //background-color: #aa3322;
           margin-top: 0;
@@ -300,6 +328,6 @@ footer{
         }
       }
     }
-  }
+  } // breackpoint 64.28 12 columns
 
 }

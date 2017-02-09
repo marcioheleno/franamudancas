@@ -482,31 +482,21 @@ th {
 
 header {
   width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 12;
 }
 
-header .container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-header .container:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-header .container .headerLogo {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+header .headerLogo {
   padding-top: .8rem;
   position: relative;
   top: 0;
@@ -517,14 +507,12 @@ header .container .headerLogo {
   z-index: 10;
 }
 
-header .container .headerLogo a {
+header .headerLogo a {
   text-decoration: none;
   color: #ff0d00;
 }
 
-header .container .headerLogo .logo,
-header .container .headerLogo section.serviceMkt .serviceMktRow .mktService .descriptionService h2,
-section.serviceMkt .serviceMktRow .mktService .descriptionService header .container .headerLogo h2 {
+header .headerLogo .logo {
   font-size: 3em;
   font-family: 'slipstreamforward';
   text-transform: uppercase;
@@ -533,7 +521,7 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService header .contai
   margin: 0;
 }
 
-header .container .headerLogo p {
+header .headerLogo p {
   font-size: 0.9em;
   font-family: 'arialbold_italic';
   text-transform: uppercase;
@@ -543,11 +531,14 @@ header .container .headerLogo p {
   margin-top: -.5em;
 }
 
-header .container nav {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: white;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -557,50 +548,44 @@ header .container nav {
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
 }
 
-@media (min-width: 40em) and (max-width: 64.27em) {
-  header .container nav {
-    width: 23rem;
-    min-height: 100%;
-  }
-}
-
-header .container nav .navContainer {
+header nav .navContent {
+  width: 100%;
+  height: auto;
   text-decoration: none;
   background: white;
   cursor: pointer;
 }
 
-header .container nav .navContainer ul {
+header nav .navContent ul {
   list-style: none;
-  margin-top: 6rem;
   padding: .4rem 0;
 }
 
-header .container nav .navContainer ul li {
+header nav .navContent ul li {
   padding: 1rem;
   text-align: center;
 }
 
-header .container nav .navContainer ul li:nth-child(odd) {
+header nav .navContent ul li:nth-child(odd) {
   background: #d8dade;
 }
 
-header .container nav .navContainer ul li:hover {
+header nav .navContent ul li:hover {
   background: #c0c0c0;
   color: #ff0d00;
 }
 
-header .container nav .navContainer ul li a {
+header nav .navContent ul li a {
   text-decoration: none;
 }
 
-header .container nav .navContainer .menuServicos {
+header nav .navContent .menuServicos {
   position: relative;
   display: none;
   padding: 0;
 }
 
-header .container nav .navContainer .menuServicos a {
+header nav .navContent .menuServicos a {
   margin-top: .5rem;
   background: white;
   padding: .8rem;
@@ -608,48 +593,59 @@ header .container nav .navContainer .menuServicos a {
   display: block;
 }
 
-header .container nav .navContainer .menuRedeSocial {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+header nav .navContent .menuRedeSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1rem;
   text-align: center;
 }
 
-header .container nav .navContainer .menuRedeSocial .iconRedes a {
-  text-indent: -99999px;
+header nav .navContent .menuRedeSocial .iconRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-header .container nav .navContainer .menuRedeSocial .iconRedes a:hover {
-  opacity: .5;
-}
-
-header .container nav .navContainer .menuRedeSocial .instagram,
-header .container nav .navContainer .menuRedeSocial .facebook,
-header .container nav .navContainer .menuRedeSocial .twitter,
-header .container nav .navContainer .menuRedeSocial .whatsapp {
+header nav .navContent .menuRedeSocial .iconRedes a {
   text-indent: -99999px;
   display: inline-block;
   width: 3rem;
   height: 3rem;
   padding: .3rem;
-  background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
-  vertical-align: middle;
 }
 
-header .container nav .navContainer .menuRedeSocial .facebook {
+header nav .navContent .menuRedeSocial .iconRedes a:hover {
+  opacity: .5;
+}
+
+header nav .navContent .menuRedeSocial .instagram {
+  background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
+}
+
+header nav .navContent .menuRedeSocial .facebook {
   background: url(/fonts/facebook.svg?224f421d31a89d751a9f620b1254aaf3) no-repeat center 100%;
 }
 
-header .container nav .navContainer .menuRedeSocial .twitter {
+header nav .navContent .menuRedeSocial .twitter {
   background: url(/fonts/twitter.svg?6d37f19ae59ab11da173841cf057bdcd) no-repeat center 100%;
 }
 
-header .container nav .navContainer .menuRedeSocial .whatsapp {
+header nav .navContent .menuRedeSocial .whatsapp {
   background: url(/fonts/whatsapp.svg?d6631d67f744c8ed4e36a425c54c347a) no-repeat center 100%;
 }
 
-header .container .open {
+header .open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -669,31 +665,15 @@ header .menuShow {
   left: 0;
 }
 
-@media (min-width: 64.28em) {
+@media screen and (max-width: 64.28em) {
   header {
     background: rgba(255, 255, 255, 0.5);
-    border-bottom: 4px solid #0033ff;
     text-align: left;
-  }
-
-  header .container {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  header .container:after {
-    content: " ";
-    display: block;
-    clear: both;
   }
 
   header .container .headerLogo {
     background: none;
     border-bottom: none;
-    width: 15.25423729%;
-    float: left;
-    margin-right: 1.69491525%;
   }
 
   header .container .headerLogo p {
@@ -701,9 +681,6 @@ header .menuShow {
   }
 
   header .container nav {
-    width: 83.05084746%;
-    float: right;
-    margin-right: 0;
     background-color: transparent;
     position: static;
     -webkit-transform: translateX(0);
@@ -720,21 +697,9 @@ header .menuShow {
     padding: 1rem 0;
     height: 100%;
     margin-top: .7rem;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  header .container nav .navContainer ul:after {
-    content: " ";
-    display: block;
-    clear: both;
   }
 
   header .container nav .navContainer ul li {
-    width: 18.36734694%;
-    float: left;
-    margin-right: 2.04081633%;
     padding: 0;
   }
 
@@ -745,12 +710,6 @@ header .menuShow {
   header .container nav .navContainer ul li:hover {
     background-color: transparent;
     color: #ff0d00;
-  }
-
-  header .container nav .navContainer ul li:last-child {
-    width: 18.36734694%;
-    float: right;
-    margin-right: 0;
   }
 
   header .container nav .navContainer .menuRedeSocial {
@@ -790,9 +749,6 @@ section.slideComponent {
 }
 
 .slideWrap .slideBlock .slider .slide {
-  width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
   height: 100%;
   top: 0;
   left: 0;
@@ -801,9 +757,6 @@ section.slideComponent {
 }
 
 .slideWrap .slideBlock .slider .slide .slidecontent {
-  width: 80%;
-  float: left;
-  margin-right: 5.26315789%;
   position: absolute;
   top: 50%;
   margin: 0 10%;
@@ -842,25 +795,7 @@ section.slideComponent {
   color: white;
 }
 
-@media (min-width: 64.28em) {
-  .slideWrap .slideBlock .slider .slide .slidecontent {
-    width: 80%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  .slideWrap .slideBlock .slider .slide .slidecontent img {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .slideWrap .slideBlock .slider .slide .slidecontent img:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
+@media screen and (max-width: 64.28em) {
   .slideWrap .slideBlock .slider .slide .slidecontent h1 {
     font-size: 7rem;
   }
@@ -868,25 +803,9 @@ section.slideComponent {
   .slideWrap .slideBlock .slider .slide .slidecontent h2 {
     font-size: 3rem;
   }
-
-  .slideWrap .slideBlock .slider .slide .slidecontent .slideButton {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .slideWrap .slideBlock .slider .slide .slidecontent .slideButton:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
 }
 
 .slideWrap #slideposition {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   position: absolute;
   bottom: 5%;
   display: -webkit-box;
@@ -923,64 +842,46 @@ section.slideComponent {
 main {
   background: url("/images/boxUp.jpg") no-repeat center;
   background-size: cover;
-  overflow-y: scroll;
-  height: 36.42rem;
+  height: auto;
+  margin: 0;
 }
 
-@media (min-width: 64.28em) {
+@media screen and (max-width: 64.28em) {
   main {
-    height: auto;
+    background-size: 100%;
+    background-position: top center;
     overflow-y: hidden;
   }
 }
 
-main section.main {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+section.main {
   background-color: rgba(224, 4, 11, 0.7);
   padding: 5%;
-  margin: 5%;
 }
 
-main section.main:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-main section.main .servicer {
+section.main .servicer {
   position: relative;
   height: 100%;
 }
 
-main section.main .servicer .pageService {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+section.main .servicer .pageService {
   height: 100%;
   margin-bottom: 2rem;
 }
 
-main section.main .servicer .pageService:last-child {
+section.main .servicer .pageService:last-child {
   margin-bottom: .9rem;
 }
 
-main section.main .servicer .pageService:last-child:after {
+section.main .servicer .pageService:last-child:after {
   display: none;
 }
 
-main section.main .servicer .pageService .thumbnails {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 2.63157895%;
+section.main .servicer .pageService .thumbnails {
+  margin-bottom: span(0.3);
 }
 
-main section.main .servicer .pageService .thumbnails picture img {
+section.main .servicer .pageService .thumbnails picture img {
   width: 100%;
   height: auto;
   border-radius: 20% 0 20% 0;
@@ -988,12 +889,7 @@ main section.main .servicer .pageService .thumbnails picture img {
   border-bottom: 5px solid white;
 }
 
-main section.main .servicer .pageService .description {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+section.main .servicer .pageService .description {
   background: #ff0d00;
   color: white;
   text-align: center;
@@ -1003,23 +899,18 @@ main section.main .servicer .pageService .description {
   border-bottom: 5px solid white;
 }
 
-main section.main .servicer .pageService .description h2 {
+section.main .servicer .pageService .description h2 {
   font-size: 200%;
   word-spacing: .5rem;
 }
 
-main section.main .servicer .pageService .description p {
+section.main .servicer .pageService .description p {
   padding: .5rem;
   font-size: 100%;
   line-height: 1.2;
 }
 
-main section.main .servicer .pageService .divisor {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+section.main .servicer .pageService .divisor {
   position: relative;
   left: 50%;
   margin-left: -25%;
@@ -1033,81 +924,36 @@ main section.main .servicer .pageService .divisor {
   border-radius: 5px;
 }
 
-main section.main .servicer .pageService .divisor:last-child {
+section.main .servicer .pageService .divisor:last-child {
   background: #ff0d00;
 }
 
-@media (min-width: 40em) and (max-width: 64.27em) {
-  main section.main .servicer .pageService {
-    width: 47.36842105%;
-    float: left;
-    margin-right: 5.26315789%;
-  }
-
-  main section.main .servicer .pageService span {
+@media screen and (max-width: 64.28em) {
+  section.main .servicer .pageService span {
     display: none;
-  }
-
-  main section.main .servicer .pageService:nth-child(even) {
-    width: 47.36842105%;
-    float: right;
-    margin-right: 0;
   }
 }
 
-@media (min-width: 64.28em) {
-  main section.main .servicer .pageService {
-    width: 23.72881356%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  main section.main .servicer .pageService span {
+@media screen and (max-width: 64.28em) {
+  section.main .servicer .pageService span {
     display: none;
   }
 
-  main section.main .servicer .pageService:last-child {
-    width: 23.72881356%;
-    float: right;
-    margin-right: 0;
-  }
-
-  main section.main .servicer .pageService .description {
+  section.main .servicer .pageService .description {
     box-sizing: border-box;
   }
 }
 
-main section.serviceMkt {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+section.main .serviceMkt {
   margin-bottom: 5rem;
   background: white;
 }
 
-main section.serviceMkt .serviceMktRow {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main section.serviceMkt .serviceMktRow:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-main section.serviceMkt .serviceMktRow .mktService {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
+section.main .serviceMkt .serviceMktRow .mktService {
   margin-top: 5rem;
 }
 
-main section.serviceMkt .serviceMktRow .mktService:after {
+section.main .serviceMkt .serviceMktRow .mktService:after {
   position: relative;
   bottom: -2.7rem;
   left: 50%;
@@ -1118,62 +964,40 @@ main section.serviceMkt .serviceMktRow .mktService:after {
   background: #ff0d00;
 }
 
-main section.serviceMkt .serviceMktRow .mktService:last-child {
+section.main .serviceMkt .serviceMktRow .mktService:last-child {
   margin-bottom: 0;
 }
 
-main section.serviceMkt .serviceMktRow .mktService:last-child:after {
+section.main .serviceMkt .serviceMktRow .mktService:last-child:after {
   display: none;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService picture {
   padding: 10%;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
   width: 80%;
   height: auto;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .descriptionService {
+section.main .serviceMkt .serviceMktRow .mktService .descriptionService {
   background: none;
   color: #001881;
   text-align: center;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+section.main .serviceMkt .serviceMktRow .mktService .descriptionService h2 {
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+section.main .serviceMkt .serviceMktRow .mktService .descriptionService p {
   font-size: 1.2rem;
   margin-top: -1.1rem;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-  width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
-}
-
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2,
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2,
-main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 {
   font-family: 'slipstreamforward';
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -1184,9 +1008,7 @@ main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnai
   margin: 0;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span,
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2 span,
-main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 span {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span {
   font-family: 'RageItalic';
   font-size: 5rem;
   padding: 0;
@@ -1195,9 +1017,7 @@ main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnai
   color: #001881;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3,
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3,
-main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 {
   text-align: center;
   margin-top: -2.5rem;
   font-size: 1.1rem;
@@ -1205,9 +1025,7 @@ main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnai
   color: #001881;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span,
-main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3 span,
-main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 span {
+section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span {
   font-size: 1.8rem;
   font-family: 'RageItalic';
   color: #ff0d00;
@@ -1216,171 +1034,82 @@ main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnai
   margin-top: -1rem;
 }
 
-main section.serviceMkt .serviceMktRow .mktService .mktDescription {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
-}
-
-main section.serviceMkt .serviceMktRow .mktService .mktDescription:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+section.main .serviceMkt .serviceMktRow .mktService .mktDescription h3 {
   text-align: center;
   font-size: 1.5rem;
   color: #001881;
 }
 
-@media (min-width: 40em) and (max-width: 64.27em) {
-  main section.serviceMkt .serviceMktRow .mktService {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
-    width: 35.8974359%;
-    float: left;
-    margin-right: 2.56410256%;
+@media screen and (max-width: 64.28em) {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService {
     margin-top: 1.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
     width: 80%;
     height: auto;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService {
     padding: 4% 0;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService h2 {
     font-size: 2.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService p {
     font-size: 1.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-    width: 100%;
-    float: left;
-    margin-right: 2.56410256%;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span {
     margin-left: .4rem;
     margin-top: -55px;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .mktDescription {
-    width: 35.8974359%;
-    float: right;
-    margin-right: 0;
+  section.main .serviceMkt .serviceMktRow .mktService .mktDescription {
     padding: .3rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+  section.main .serviceMkt .serviceMktRow .mktService .mktDescription h3 {
     text-align: center;
     font-size: 1.5rem;
     color: #001881;
   }
 }
 
-@media (min-width: 64.28em) {
-  main section.serviceMkt .serviceMktRow .mktService {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
-    width: 35.8974359%;
-    float: left;
-    margin-right: 2.56410256%;
+@media screen and (max-width: 64.28em) {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService {
     margin-top: 1.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
     width: 80%;
     height: auto;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService {
     padding: 4% 0;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService h2 {
     font-size: 2.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService p {
+  section.main .serviceMkt .serviceMktRow .mktService .descriptionService p {
     font-size: 1.6rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-    width: 100%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
-  main section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
-  main section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+  section.main .serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span {
     margin-left: .4rem;
     margin-top: -55px;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .mktDescription {
-    width: 35.8974359%;
-    float: right;
-    margin-right: 0;
+  section.main .serviceMkt .serviceMktRow .mktService .mktDescription {
     padding: .3rem;
   }
 
-  main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
+  section.main .serviceMkt .serviceMktRow .mktService .mktDescription h3 {
     text-align: center;
     font-size: 1.5rem;
     color: #001881;
@@ -1435,32 +1164,11 @@ main section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
 */
 
 section.serviceMkt {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 5rem;
   background: white;
 }
 
-section.serviceMkt .serviceMktRow {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.serviceMkt .serviceMktRow:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 section.serviceMkt .serviceMktRow .mktService {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   margin-top: 5rem;
 }
 
@@ -1508,29 +1216,7 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService p {
   margin-top: -1.1rem;
 }
 
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-  width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
-}
-
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2,
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2,
-section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 {
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 {
   font-family: 'slipstreamforward';
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -1541,9 +1227,7 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLog
   margin: 0;
 }
 
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span,
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h2 span,
-section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h2 span {
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 span {
   font-family: 'RageItalic';
   font-size: 5rem;
   padding: 0;
@@ -1552,9 +1236,7 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLog
   color: #001881;
 }
 
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3,
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3,
-section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 {
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 {
   text-align: center;
   margin-top: -2.5rem;
   font-size: 1.1rem;
@@ -1562,9 +1244,7 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLog
   color: #001881;
 }
 
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span,
-section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 h3 span,
-section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 h3 span {
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span {
   font-size: 1.8rem;
   font-family: 'RageItalic';
   color: #ff0d00;
@@ -1573,44 +1253,14 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLog
   margin-top: -1rem;
 }
 
-section.serviceMkt .serviceMktRow .mktService .mktDescription {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  float: left;
-  margin-right: 5.26315789%;
-}
-
-section.serviceMkt .serviceMktRow .mktService .mktDescription:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
   text-align: center;
   font-size: 1.5rem;
   color: #001881;
 }
 
-@media (min-width: 40em) and (max-width: 64.27em) {
-  section.serviceMkt .serviceMktRow .mktService {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
+@media screen and (max-width: 64.28em) {
   section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
-    width: 35.8974359%;
-    float: left;
-    margin-right: 2.56410256%;
     margin-top: 1.6rem;
   }
 
@@ -1620,9 +1270,6 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
   }
 
   section.serviceMkt .serviceMktRow .mktService .descriptionService {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
     padding: 4% 0;
   }
 
@@ -1634,31 +1281,12 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
     font-size: 1.6rem;
   }
 
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-    width: 100%;
-    float: left;
-    margin-right: 2.56410256%;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
-  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span {
     margin-left: .4rem;
     margin-top: -55px;
   }
 
   section.serviceMkt .serviceMktRow .mktService .mktDescription {
-    width: 35.8974359%;
-    float: right;
-    margin-right: 0;
     padding: .3rem;
   }
 
@@ -1669,23 +1297,8 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
   }
 }
 
-@media (min-width: 64.28em) {
-  section.serviceMkt .serviceMktRow .mktService {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
+@media screen and (max-width: 64.28em) {
   section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
-    width: 35.8974359%;
-    float: left;
-    margin-right: 2.56410256%;
     margin-top: 1.6rem;
   }
 
@@ -1695,9 +1308,6 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
   }
 
   section.serviceMkt .serviceMktRow .mktService .descriptionService {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
     padding: 4% 0;
   }
 
@@ -1709,31 +1319,12 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
     font-size: 1.6rem;
   }
 
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo,
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2,
-  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 {
-    width: 100%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span,
-  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .descriptionService h2 span,
-  section.serviceMkt .serviceMktRow .mktService .descriptionService .thumbnailsLogo h2 span {
+  section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo span {
     margin-left: .4rem;
     margin-top: -55px;
   }
 
   section.serviceMkt .serviceMktRow .mktService .mktDescription {
-    width: 35.8974359%;
-    float: right;
-    margin-right: 0;
     padding: .3rem;
   }
 
@@ -1745,11 +1336,6 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
 }
 
 .testimonials-section {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   background-color: #ff0d00;
 }
 
@@ -1886,78 +1472,34 @@ section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
 }
 
 footer {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   background: #001881;
   height: auto;
   bottom: 0;
-}
-
-footer .footerContainer {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer .footerContainer:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-footer .footerContainer .footerMenu,
-footer .footerContainer .footerContato,
-footer .footerContainer .formasDePagamentos,
-footer .footerContainer .footerSocial {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   color: white;
 }
 
-footer .footerContainer .footerMenu h2,
-footer .footerContainer .footerContato h2,
-footer .footerContainer .formasDePagamentos h2,
-footer .footerContainer .footerSocial h2 {
+footer .footerContainer .footerMenu h2 {
   text-transform: uppercase;
 }
 
-footer .footerContainer .footerMenu ul,
-footer .footerContainer .footerContato ul,
-footer .footerContainer .formasDePagamentos ul,
-footer .footerContainer .footerSocial ul {
+footer .footerContainer .footerMenu ul {
   text-decoration: none;
 }
 
-footer .footerContainer .footerMenu ul li,
-footer .footerContainer .footerContato ul li,
-footer .footerContainer .formasDePagamentos ul li,
-footer .footerContainer .footerSocial ul li {
+footer .footerContainer .footerMenu ul li {
   list-style: none;
 }
 
-footer .footerContainer .footerMenu ul li a,
-footer .footerContainer .footerContato ul li a,
-footer .footerContainer .formasDePagamentos ul li a,
-footer .footerContainer .footerSocial ul li a {
+footer .footerContainer .footerMenu ul li a {
   text-decoration: none;
   color: white;
 }
 
-footer .footerContainer .footerMenu ul li a:hover,
-footer .footerContainer .footerContato ul li a:hover,
-footer .footerContainer .formasDePagamentos ul li a:hover,
-footer .footerContainer .footerSocial ul li a:hover {
+footer .footerContainer .footerMenu ul li a:hover {
   color: #ff0d00;
 }
 
-footer .footerContainer .footerMenu ul li a:active,
-footer .footerContainer .footerContato ul li a:active,
-footer .footerContainer .formasDePagamentos ul li a:active,
-footer .footerContainer .footerSocial ul li a:active {
+footer .footerContainer .footerMenu ul li a:active {
   color: #0033ff;
 }
 
@@ -1965,58 +1507,32 @@ footer .footerContainer .footerContato span {
   display: block;
 }
 
-footer .footerContainer .formasDePagamentos {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-footer .footerContainer .formasDePagamentos .iconCard a {
+footer .footerContainer .formasDePagamentos .iconCard span {
   text-indent: -99999px;
 }
 
-footer .footerContainer .formasDePagamentos .iconCard a:hover {
+footer .footerContainer .formasDePagamentos .iconCard span:hover {
   opacity: .5;
 }
 
-footer .footerContainer .formasDePagamentos .iconCard a:nth-child(1) {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
+footer .footerContainer .formasDePagamentos .iconCard span:nth-child(1) {
   height: 2.70rem;
   background: url(/fonts/masterCard.svg?51b7864f3c4f3f1eef8074be87af82fd) no-repeat center 100%;
 }
 
-footer .footerContainer .formasDePagamentos .iconCard a:nth-child(2) {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
+footer .footerContainer .formasDePagamentos .iconCard span:nth-child(2) {
   height: 2.70rem;
   background: url(/fonts/visaCard.svg?015e190023628676dfdb9075fc6a0d3f) no-repeat center 100%;
 }
 
-footer .footerContainer .formasDePagamentos .iconCard a:nth-child(3) {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
+footer .footerContainer .formasDePagamentos .iconCard span:nth-child(3) {
   height: 2.70rem;
   background: url(/fonts/dinnersCard.svg?63ed69f86aa683ce09718f4116e4add1) no-repeat center 100%;
 }
 
-footer .footerContainer .formasDePagamentos .iconCard a:last-child {
-  width: 21.05263158%;
-  float: right;
-  margin-right: 0;
+footer .footerContainer .formasDePagamentos .iconCard span:last-child {
   height: 2.70rem;
   background: url(/fonts/hiperCard.svg?18b5e90bebe75a31182c4a6587022544) no-repeat center 100%;
-}
-
-footer .footerContainer .footerSocial {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 footer .footerContainer .footerSocial .iconRedes a {
@@ -2027,187 +1543,123 @@ footer .footerContainer .footerSocial .iconRedes a:hover {
   opacity: .5;
 }
 
-footer .footerContainer .footerSocial .iconRedes .instagram,
-footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .facebook,
-header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .facebook,
-footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .twitter,
-header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .twitter,
-footer .footerContainer .footerSocial .iconRedes header .container nav .navContainer .menuRedeSocial .whatsapp,
-header .container nav .navContainer .menuRedeSocial footer .footerContainer .footerSocial .iconRedes .whatsapp,
-footer .footerContainer .footerSocial .iconRedes .facebook,
-footer .footerContainer .footerSocial .iconRedes .twitter,
-footer .footerContainer .footerSocial .iconRedes .whatsapp {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
+footer .footerContainer .footerSocial .iconRedes .instagram {
   height: 2.70rem;
   background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
 }
 
 footer .footerContainer .footerSocial .iconRedes .facebook {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
   background: url(/fonts/facebook.svg?224f421d31a89d751a9f620b1254aaf3) no-repeat center 100%;
 }
 
 footer .footerContainer .footerSocial .iconRedes .twitter {
-  width: 21.05263158%;
-  float: left;
-  margin-right: 5.26315789%;
   background: url(/fonts/twitter.svg?6d37f19ae59ab11da173841cf057bdcd) no-repeat center 100%;
 }
 
 footer .footerContainer .footerSocial .iconRedes .whatsapp {
-  width: 21.05263158%;
-  float: right;
-  margin-right: 0;
   background: url(/fonts/whatsapp.svg?d6631d67f744c8ed4e36a425c54c347a) no-repeat center 100%;
 }
 
-footer .footerContainer .logo p,
-footer .footerContainer section.serviceMkt .serviceMktRow .mktService .descriptionService h2 p,
-section.serviceMkt .serviceMktRow .mktService .descriptionService footer .footerContainer h2 p {
-  color: white;
-  margin-top: -2rem;
+footer .footerContainer .logoFooter img {
+  display: block;
 }
 
-@media (min-width: 40em) and (max-width: 64.27em) {
-  footer .footerContainer {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+footer .footerContainer .logoFooter p {
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 29.12em) {
+  footer .footerContainer .logoFooter {
+    margin-top: 1rem;
   }
 
-  footer .footerContainer:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  footer .footerContainer .footerMenu,
-  footer .footerContainer .footerContato,
-  footer .footerContainer .formasDePagamentos,
-  footer .footerContainer .footerSocial {
-    width: 35.8974359%;
+  footer .footerContainer .logoFooter img {
     float: left;
-    margin-right: 2.56410256%;
+    margin-left: .5rem;
   }
 
-  footer .footerContainer .footerMenu ul li,
-  footer .footerContainer .footerContato ul li,
-  footer .footerContainer .formasDePagamentos ul li,
-  footer .footerContainer .footerSocial ul li {
+  footer .footerContainer .logoFooter p {
+    font-size: 90%;
+    word-spacing: -.4rem;
+  }
+}
+
+@media screen and (max-width: 64.28em) {
+  footer {
+    background-color: #4cae4c;
+  }
+
+  footer .footerMenu ul li {
     margin-bottom: 5%;
   }
 
-  footer .footerContainer .formasDePagamentos {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
+  footer .footerContato {
+    padding: 0;
+    margin: 0;
+    text-align: right;
   }
 
-  footer .footerContainer .footerSocial {
-    width: 61.53846154%;
-    float: right;
-    margin-right: 0;
-    margin-bottom: 1rem;
+  footer .footerContato h2 {
+    margin: 1rem 0;
   }
 
-  footer .footerContainer .footerContato {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  footer .footerContainer .footerContato .fones {
-    text-align: center;
-  }
-
-  footer .footerContainer .footerContato .fones span {
+  footer .footerContato .fones span {
     display: inline;
-    text-align: justify;
     margin-bottom: 0;
   }
 
-  footer .footerContainer .footerContato .fones span:after {
-    content: ' | ';
-  }
-
-  footer .footerContainer .footerContato .fones span:nth-child(4):after {
-    content: '';
-  }
-
-  footer .footerContainer .footerContato .fones .email p {
-    font-weight: 400;
-    text-align: center;
-  }
-
-  footer .footerContainer .footerContato .enderecos {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  footer .footerContainer .footerContato .enderecos h3 {
-    text-align: left;
-  }
-
-  footer .footerContainer .footerContato .enderecos p {
-    display: inline;
-  }
-
-  footer .footerContainer .footerContato .enderecos p:after {
+  footer .footerContato .fones span:after {
     content: ' - ';
   }
 
-  footer .footerContainer .footerContato .enderecos p:last-child:after {
+  footer .footerContato .fones span:nth-child(4):after {
+    content: '';
+  }
+
+  footer .footerContato .email span {
+    font-weight: 400;
+  }
+
+  footer .footerContato .enderecos {
+    margin-bottom: 1rem;
+  }
+
+  footer .footerContato .enderecos p {
+    display: inline;
+  }
+
+  footer .footerContato .enderecos p:after {
+    content: ' - ';
+  }
+
+  footer .footerContato .enderecos p:last-child:after {
     content: '.';
+  }
+
+  footer .formasDePagamentos {
+    background-color: yellow;
+  }
+
+  footer .footerSocial {
+    background-color: #aa3322;
+    margin-bottom: 1rem;
+  }
+
+  footer .logo {
+    display: inline;
+  }
+
+  footer .logo img {
+    width: 5rem;
+    float: left;
   }
 }
 
-@media (min-width: 64.28em) {
-  footer .footerContainer {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  footer .footerContainer:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  footer .footerContainer .footerMenu,
-  footer .footerContainer .footerContato,
-  footer .footerContainer .formasDePagamentos,
-  footer .footerContainer .footerSocial {
-    width: 15.25423729%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  footer .footerContainer .formasDePagamentos {
-    width: 40.6779661%;
-    float: left;
-    margin-right: 1.69491525%;
-  }
-
-  footer .footerContainer .footerSocial {
-    width: 40.6779661%;
-    float: right;
-    margin-right: 0;
-  }
-
+@media screen and (max-width: 64.28em) {
   footer .footerContainer .footerContato {
-    width: 80%;
-    float: left;
-    margin-right: 1.69491525%;
     margin-top: 1rem;
     line-height: .2rem;
   }
@@ -2236,10 +1688,6 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService footer .footer
   }
 
   footer .footerContainer .footerContato .enderecos {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
     text-align: center;
     margin-top: 0;
   }

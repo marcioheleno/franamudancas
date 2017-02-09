@@ -1,191 +1,168 @@
 header {
-  @include span(100%);
-  //height: 100%;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
-  //background: rgba(255, 255, 255, .5);
-  //border-bottom: 4px solid $colorSecundary;
-  //@include box-shadow($colorTertiary 0 3px 0);
   z-index: 12;
-  //position: absolute;
 
-  .container {
-    @include container(100%);
+  .headerLogo {
+    padding-top: .8rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .5);
+    border-bottom: 4px solid $colorSecundary;
+    text-align: center;
+    z-index: 10;
 
-    .headerLogo {
-      @include span(4 of 4);
-      padding-top: .8rem;
-      position: relative;
-      top: 0;
-      left: 0;
-      background: rgba(255, 255, 255, .5);
-      border-bottom: 4px solid $colorSecundary;
-      //@include box-shadow($colorTertiary 0 3px 0);
-      //text-decoration: none;
-      //z-index: 25;
-      text-align: center;
-      z-index: 10;
-
-      a {
-        text-decoration: none;
-        color: $colorTertiary;
-      }
+    a {
+      text-decoration: none;
+      color: $colorTertiary;
+    }
 
 
-      .logo {
-        font-size: 3em;
-        font-family: 'slipstreamforward';
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: $colorTertiary;
-        margin: 0;
+    .logo {
+      font-size: 3em;
+      font-family: 'slipstreamforward';
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $colorTertiary;
+      margin: 0;
 
-      } // #logo
+    } // #logo
 
-      p {
-        font-size: 0.9em;
-        font-family: 'arialbold_italic';
-        text-transform: uppercase;
-        letter-spacing: -1px;
-        color: $colorSecundary;
-        margin: 0;
-        margin-top: -.5em;
-      } //p
+    p {
+      font-size: 0.9em;
+      font-family: 'arialbold_italic';
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: $colorSecundary;
+      margin: 0;
+      margin-top: -.5em;
+    } //p
 
-    }  //.headerLogo
+  }  //.headerLogo
 
-    nav {
-      @include span(4 of 4);
-      //min-height: 100%;
+  nav {
+    display: flex;
+    flex-direction: column;
+    background: $colorPrimary;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+
+    //@include susy-breakpoint(40em 64.27em, $gMedium) {
+    //@media screen and (max-width:64.28em) {
+    //  width: 23rem;
+    //  min-height: 100%;
+    //} // susy-breakpoint(40em 64.27em, $gMedium)
+
+    .navContent {
+      width: 100%;
+      height: auto;
+      text-decoration: none;
       background: $colorPrimary;
-      //position: absolute;
-      //top: 0;
-      //left: 0;
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
-      //z-index: 99999;
+      cursor: pointer;
 
-      @include susy-breakpoint(40em 64.27em, $gMedium) {
-        width: 23rem;
-        min-height: 100%;
-      } // susy-breakpoint(40em 64.27em, $gMedium)
+      ul {
+        list-style: none;
+        //margin-top: 3rem;
+        padding: .4rem 0;
 
-      .navContainer {
-        //@include span(100%);
-        //height: 70%;
-        //position: fixed;
-        text-decoration: none;
-        background: $colorPrimary;
-        //z-index: 100000;
-        cursor: pointer;
-        //overflow: scroll;
-        //text-align: center;
-
-        ul {
-          list-style: none;
-          margin-top: 6rem;
-          padding: .4rem 0;
-
-          li {
-            padding: 1rem;
-            text-align: center;
-
-            &:nth-child(odd) {
-              background: rgb(216, 218, 222);
-            }
-
-            &:hover {
-              background: #c0c0c0;
-              color: $colorTertiary;
-            }
-
-            a {
-              text-decoration: none;
-
-            }
-
-          } // li
-
-        } //ul
-
-        .menuServicos {
-          position: relative;
-          display: none;
-          padding: 0;
-
-          a {
-            margin-top: .5rem;
-            background: $colorPrimary;
-            padding: .8rem;
-            text-decoration: none;
-            display: block;
-          }
-
-        } //.menuServicos
-
-        .menuRedeSocial {
-          @include span(4 of 4);
-          //width: 100%;
-          //position: absolute;
-          //bottom: 2rem;
+        li {
+          padding: 1rem;
           text-align: center;
 
-          .iconRedes {
+          &:nth-child(odd) {
+            background: rgb(216, 218, 222);
+          }
 
-            a {
-              //display: inline-block;
-              text-indent: -99999px;
+          &:hover {
+            background: #c0c0c0;
+            color: $colorTertiary;
+          }
 
+          a {
+            text-decoration: none;
 
-              &:hover {
-                opacity: .5;
-              }
-            }
+          }
 
-          } //.iconRedes
+        } // li
 
-          .instagram {
+      } //ul
+
+      .menuServicos {
+        position: relative;
+        display: none;
+        padding: 0;
+
+        a {
+          margin-top: .5rem;
+          background: $colorPrimary;
+          padding: .8rem;
+          text-decoration: none;
+          display: block;
+        }
+
+      } //.menuServicos
+
+      .menuRedeSocial {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        text-align: center;
+
+        .iconRedes {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          a {
             text-indent: -99999px;
             display: inline-block;
             width: 3rem;
             height: 3rem;
             padding: .3rem;
-            background: url("../images/instagram.svg") no-repeat center 100%;
-            vertical-align: middle;
-          }
-          //.instagram
 
-          .facebook {
-            @extend .instagram;
-            background: url("../images/facebook.svg") no-repeat center 100%;
+            &:hover {
+              opacity: .5;
+            }
           }
-          //.facebook
 
-          .twitter {
-            @extend .instagram;
-            background: url("../images/twitter.svg") no-repeat center 100%;
-          }
-          //.twitter
+        } //.iconRedes
 
-          .whatsapp {
-            @extend .instagram;
-            background: url("../images/whatsapp.svg") no-repeat center 100%;
-          }
-          //.whatsapp
-
+        .instagram {
+          background: url("../images/instagram.svg") no-repeat center 100%;
         }
-        // .menuRedeSocial
+        //.instagram
+
+        .facebook {
+          background: url("../images/facebook.svg") no-repeat center 100%;
+        }
+        //.facebook
+
+        .twitter {
+          background: url("../images/twitter.svg") no-repeat center 100%;
+        }
+        //.twitter
+
+        .whatsapp {
+          background: url("../images/whatsapp.svg") no-repeat center 100%;
+        }
+        //.whatsapp
+
       }
-      //.navContainer
-
-    } // nav
-
-    .open {
-      transform: translateX(0);
+      // .menuRedeSocial
     }
+    //.navContainer
 
-  } //.container
+  } // nav
+
+  .open {
+    transform: translateX(0);
+  }
 
   .triggerMenu {
     //background: $colorTertiary;
@@ -204,24 +181,21 @@ header {
     left: 0;
   } // menuShow
 
-
-  //&:before{
-  //  margin: b;
-  //}
-  @include susy-breakpoint(64.28em, $gDesk) {
+  //@include susy-breakpoint(64.28em, $gDesk) {
+  @media screen and (max-width:64.28em) {
     background: rgba(255, 255, 255, .5);
-    border-bottom: 4px solid $colorSecundary;
+    //border-bottom: 4px solid $colorSecundary;
     //@include box-shadow($colorTertiary 0 3px 0);
     text-align: left;
 
     .container {
-      @include container(85%);
+      //@include container(85%);
 
 
       .headerLogo {
         background: none;
         border-bottom: none;
-        @include span(2 of 12);
+        //@include span(2 of 12);
         //@include box-shadow(none);
 
         p {
@@ -231,7 +205,7 @@ header {
       }//.headerLogo
 
       nav {
-        @include span(last 10 of 12);
+        //@include span(last 10 of 12);
         background-color: transparent;
         position: static;
         transform: translateX(0);
@@ -251,17 +225,9 @@ header {
             height: 100%;
             margin-top: .7rem;
 
-            @include container(10);
-            //background-color: #aa3322;
-
-            //padding: rem;
-
-            //background-color: #6666ff;
-
-            //width: auto;
 
             li {
-              @include span(first 2 of 10);
+              //@include span(first 2 of 10);
               padding: 0;
               //width: 100%;
 
@@ -275,7 +241,7 @@ header {
               }
 
               &:last-child {
-                @include span(last 2 of 10);
+                //@include span(last 2 of 10);
 
                 //margin-left: 0;
 

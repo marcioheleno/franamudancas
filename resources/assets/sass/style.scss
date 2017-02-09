@@ -3,69 +3,29 @@
 
 // Screen
 // ======
-@import "./../../../node_modules/susy/sass/susy";
-//@import "~susy/sass/susy";
 @import "mixins";
 @import "variables";
 @import "partials/normalize";
-//@import "~compass-loader/index.js";
-//@import "breakpoint";
-@import "partials/grids";
 
 // variaveis
 @import "variaveis/color";
-@import "variaveis/_media";
-// @import "tets/yshs";
+@import "variaveis/media";
+
 // fontes
 @import "variaveis/fontFace";
 
 // layout
-//@import "partials/layout";
 @import "partials/header";
 @import "partials/slide";
 @import "partials/main";
 @import "partials/serviceMkt";
 @import "partials/testimonials";
-@import "partials/_footer.scss";
+@import "partials/footer.scss";
 
 
 html,body {
-  //@include container();
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  //@include span(100%);
-  //background: blue;
 }
-
-//.container {
-//  @include span(80%);
-//  //padding: 2.5%;
-//  position: relative;
-//  left: 50%;
-//  margin-left: -40%;
-//  margin-top: .7rem;
-//  //margin-bottom: 5%;
-//  box-sizing: border-box;
-//}
-// TODO revisar
-//body.hidder {
-  //overflow: hidden;
-//}
-
-//h1 {
-//  font-family: Helvetica, Arial, Verdana;
-//  font-weight: normal;
-//  font-size: 500%;
-//  color: #222222;
-//}
-
-
-
-// => e substituido no _grid com o susy
-//*{
-//  -moz-box-sizing: border-box;
-//  -webkit-box-sizing: border-box;
-//  box-sizing: border-box;
-//}
