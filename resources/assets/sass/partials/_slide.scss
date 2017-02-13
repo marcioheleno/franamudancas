@@ -14,36 +14,6 @@ section.slideComponent {
     color: white;
   }
 
-  //#sec {
-  //
-  //  .slidecontent {
-  //    //margin-top: 0;
-  //    padding-top: 39%;
-  //    //position: absolute;
-  //    //bottom: -5rem;
-  //
-  //    .slideHeader {
-  //      position: relative;
-  //      //button: 2rem;
-  //    }
-  //
-  //    h1 {
-  //      //color: $colorTertiary;
-  //      font-size: 2.5rem;
-  //      text-align: left;
-  //
-  //      @include susy-breakpoint(64.28em, $gDesk) {
-  //        text-align: center;
-  //        padding-top: 5rem;
-  //        text-transform: uppercase;
-  //
-  //      }
-  //
-  //    }
-  //
-  //  }
-  //}
-
   .slideBlock {
     width: 100%;
 
@@ -52,11 +22,9 @@ section.slideComponent {
       height: 100%;
       overflow: hidden;
       position: relative;
-      //background: green;
 
       .slide {
-        @include span(100%);
-        //width: 100%;
+        width: 100%;
         height: 100%;
         top: 0;
         left: 0;
@@ -64,68 +32,136 @@ section.slideComponent {
         position: absolute;
 
         .slidecontent {
-          @include span(80%);
+          width: 100%;
           position: absolute;
-          top: 50%;
-          //width: 80%;
-          margin: 0 10%;
-          //margin-top: 22%;
+          top: 55%;
           text-align: center;
 
-          img {
-            margin-top: 5%;
-          }
+          .slideContainerText {
+            box-sizing: content-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 10%;
 
-          h1 {
-            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            font-weight: bold;
-            //font-size: 120%;
-            margin: 20px 0 30px 0;
-            padding: 0;
-            font-size: 3rem;
-            color: $colorSecundary;
-            font-weight: bold;
-            //display: block;
-            //line-height: 115px;
-          }
-
-          h2 {
-            font-size: 2rem;
-            color: $colorTertiary;
-          }
-
-          .slideButton {
-            font-family: 'Lato', sans-serif;
-            font-size: 2rem;
-            padding: 1rem 1rem;
-            border: 0.3rem solid white;
-            border-radius: 25px;
-
-            a {
-              text-decoration: none;
-              color: $colorPrimary;
-            }
-          }
-
-          @include susy-breakpoint(64.28em, $gDesk) {
-            @include span(80%);
 
             img {
-              @include container(60%);
+              margin-top: 5%;
+              margin-bottom: -38px;
             }
 
             h1 {
-              font-size: 7rem;
+              text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+              font-weight: bold;
+              //font-size: 120%;
+              //margin: 20px 0 30px 0;
+              padding: 0;
+              font-size: 250%;
+              color: $colorSecundary;
+              font-weight: bold;
+              margin: 0;
             }
 
-            h2{
-              font-size: 3rem;
+            h2 {
+              font-size: 160%;
+              color: $colorTertiary;
             }
-            .slideButton{
-              @include container(60%);
+
+            .slideButton {
+              font-family: 'Lato', sans-serif;
+              background-color: rgba(255,255,255, 0.0);
+              font-size: 160%;
+              padding: 2% 21%;
+              border: 0.2rem solid white;
+              border-radius: 25px;
+              white-space: nowrap;
+
+              a {
+                text-decoration: none;
+                color: $colorPrimary;
+              }
+            }
+          }
+
+          .slideSuaHistoria {
+            margin: -85px 0;
+          }
+
+          //media query para 480px
+          @media only screen and (min-width: 480px) {
+            align-items: flex-end;
+            bottom: 0;
+
+
+            .slideContainerText {
+              margin: -30px;
+
+              @media only screen and (min-width: 680px) {
+                h1 {
+                  font-size: 600%;
+                }
+              }
+
+              img {
+                width: 70%;
+                margin: -13px 0px -58px 0px;
+              }
+
+              h1{
+                font-size: 200%;
+                margin-bottom: -16px;
+              }
+            }
+            .slideResidencial{
+              margin: 0;
+
+
+            }
+            .slideBens {
+              margin: -6px;
+            }
+            .slideProfissional {
+              @extend .slideResidencial;
+            }
+            .slideSuaHistoria{
+              margin: -49px 0px -58px 0px;
+
+              img {
+                width: 60%;
+                margin: -13px 0px -58px 0px;
+              }
+              h2 {
+                font-size: 155%;
+              }
+              .slideButton {
+                margin: -10px;
+                font-size: 148%;
+                padding: 1% 20%;
+              }
             }
 
           }
+
+          //@include susy-breakpoint(64.28em, $gDesk) {
+          //  width: 80%;
+          //
+          //  img {
+          //    width: 60%;
+          //  }
+          //
+          //  h1 {
+          //    font-size: 7rem;
+          //  }
+          //
+          //  h2{
+          //    font-size: 3rem;
+          //  }
+          //  .slideButton{
+          //    width: 60%;
+          //  }
+          //
+          //}
         }
       }
     }
@@ -165,7 +201,7 @@ section.slideComponent {
 
   //  slide controller
   #slideposition {
-    @include span(12 of 12);
+    width: 100%;
     position: absolute;
     bottom: 5%;
     display: flex;

@@ -1,16 +1,21 @@
 footer{
-  @include span(full);
+  display: flex;
+  flex-direction: column;
   background: $colorAzul;
   height: auto;
+  padding: 0 10%;
   //position: fixed;
   bottom: 0;
+  color: $colorPrimary;
 
   .footerContainer{
-    @include container(80%);
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
 
     .footerMenu{
-      @include span(4 of 4);
-      color: $colorPrimary;
+      display: flex;
+      flex-direction: column;
 
       h2 {
         text-transform: uppercase;
@@ -38,48 +43,47 @@ footer{
     } //footerMenu
 
     .footerContato {
-      @extend .footerMenu;
+      display: flex;
+      flex-direction: column;
+
       span {
         display: block;
       }
-      //@include span(last 1 of 4);
     }
 
     .formasDePagamentos {
-      @include span(full);
-      //background: pink;
-      @extend .footerMenu;
+      display: flex;
+      flex-direction: column;
+
 
       .iconCard{
-        //@extend
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        //background-color: #00b3ff;
+        width: 100%;
+        height: 2rem;
 
-        a{
+        span{
           text-indent: -99999px;
-          //border-radius: .5rem;
+          width: 25%;
+          height: auto;
+          display: flex;
 
           &:hover {
             opacity: .5;
           }
 
           &:nth-child(1){
-            @include span(1 of 4);
-            height: 2.70rem;
             background: url("../images/masterCard.svg") no-repeat center 100%;
-
           }
           &:nth-child(2){
-            @include span(1 of 4);
-            height: 2.70rem;
             background: url("../images/visaCard.svg") no-repeat center 100%;
           }
           &:nth-child(3){
-            @include span(1 of 4);
-            height: 2.70rem;
             background: url("../images/dinnersCard.svg") no-repeat center 100%;
           }
           &:last-child{
-            @include span(last 1 of 4);
-            height: 2.70rem;
             background: url("../images/hiperCard.svg") no-repeat center 100%;
           }
         }
@@ -87,219 +91,244 @@ footer{
     }
 
     .footerSocial {
-      @include span(full);
-      //background: pink;
-      @extend .footerMenu;
-      //@include container(4);
+      display: flex;
+      flex-direction: column;
 
       .iconRedes {
-        //@include container(75%);
-        //background: green;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 2rem;
 
-        a {
-        //  //@include span(100%);
-        //  //display: inline-block;
-          text-indent: -99999px;
+        span {
+          width: 25%;
+          height: auto;
+          display: flex;
 
-          &:hover {
-            opacity: .5;
+          a {
+            width: 100%;
+            height: 100%;
+            //  //@include span(100%);
+            //  //display: inline-block;
+            text-indent: -99999px;
+
           }
         }
+
         .instagram {
-          @include span(1 of 4);
-          //text-indent: -99999px;
-          //width: 24%;
-          height: 2.70rem;
-          //padding: .3rem;
           background: url("../images/instagram.svg") no-repeat center 100%;
         }
         .facebook {
-          @extend .instagram;
-          @include span(1 at 2 of 4);
           background: url("../images/facebook.svg") no-repeat center 100%;
         }
         .twitter {
-          @extend .instagram;
-          @include span(1 at 3 of 4);
           background: url("../images/twitter.svg") no-repeat center 100%;
         }
         .whatsapp {
-          @extend .instagram;
-          @include span(last 1 of 4);
           background: url("../images/whatsapp.svg") no-repeat center 100%;
         }
-      }
+      } // .iconRedes
     }
 
-    .logo{
+    .logoFooter{
+      @extend .footerMenu;
+
+      img {
+
+      }
+
       p{
         color: $colorPrimary;
-        margin-top: - 2rem;
+        //margin-top: -0.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
       }
-
+      //@include susy-breakpoint(29.12em) {
+      //@media screen and (max-width:29.12em) {
+      //  margin-top: 1rem;
+      //  img {
+      //    //@include container(25%);
+      //    float: left;
+      //    margin-left: .5rem;
+      //  }
+      //  p {
+      //    font-size:90%;
+      //    word-spacing: -.4rem;
+      //    //margin-top: .2rem;
+      //  }
+      //}
     }
+  } //footerContainer mobile
 
+  //@include susy-breakpoint(40em 64.27em, $gMedium) {
+  //@media screen and (max-width:64.28em) {
+  //  //@include container(100%);
+  //  background-color: #4cae4c;
+  //  .footerMenu {
+  //    //@include span(4 of 8);
+  //
+  //    ul {
+  //      li{
+  //        margin-bottom: 5%;
+  //        //background-color: #d8dade;
+  //      }
+  //    }
+  //  } //footerMenu
+  //
+  //  .footerContato {
+  //    //@include span(4 of 8);
+  //    padding: 0;
+  //    margin: 0;
+  //    text-align: right;
+  //    h2 {
+  //      margin: 1rem 0;
+  //    }
+  //    .fones {
+  //
+  //      span {
+  //        display: inline;
+  //        margin-bottom: 0;
+  //
+  //        &:after {
+  //          content: ' - ';
+  //        }
+  //
+  //        &:nth-child(4) {
+  //          &:after {
+  //            content: '';
+  //          }
+  //        }
+  //      }
+  //      //span
+  //    } //fones
+  //    .email {
+  //      span {
+  //        font-weight: 400;
+  //      }
+  //    } //email
+  //    .enderecos {
+  //      //@include span(full);
+  //      //background-color: #aa3322;
+  //      margin-bottom: 1rem;
+  //
+  //      p {
+  //        display: inline;
+  //        &:after {
+  //          content: ' - ';
+  //        }
+  //        &:last-child {
+  //
+  //          &:after {
+  //            content: '.';
+  //          }
+  //        }
+  //      }
+  //    } //enderecos
+  //  } //.footerContato
+  //
+  //  .formasDePagamentos {
+  //    //@include span(4 of 8);
+  //    background-color: yellow;
+  //    //margin-bottom: 1rem;
+  //  } // formasDePagamentos
+  //
+  //  .footerSocial {
+  //    //@include span(4 of 8);
+  //    background-color: #aa3322;
+  //    margin-bottom: 1rem;
+  //  } //footerSocial
+  //
+  //
+  //  .logo{
+  //    //@include container(100%);
+  //    display: inline;
+  //    //@extend .footerMenu;
+  //
+  //    img {
+  //      width: 5rem;
+  //      float: left;
+  //      //text-align: center;
+  //    }
+  //  }
+  //} // breackpoint 40em 8 coluns
 
-  }
-
-  @include susy-breakpoint(40em 64.27em, $gMedium) {
-    //@include container(100%);
-    .footerContainer{
-      @include container(80%);
-
-      .footerMenu {
-        @include span(3 of 8);
-
-        ul {
-          li{
-            margin-bottom: 5%;
-            //background-color: #d8dade;
-          }
-        }
-      }
-
-      .formasDePagamentos {
-        @include span(last 5 of 8);
-        //background-color: yellow;
-        //margin-bottom: 1rem;
-      }
-
-      .footerSocial {
-        @include span(last 5 of 8);
-        //background-color: #aa3322;
-        margin-bottom: 1rem;
-      }
-      .footerContato {
-        @include span(full);
-        //background-color: #cc6633;
-
-        .fones {
-          //white-space: nowrap;
-          text-align: center;
-
-          span{
-            display: inline;
-            text-align: justify;
-            margin-bottom: 0;
-
-            &:after {
-              content: ' | ';
-            }
-
-            &:nth-child(4) {
-              &:after {
-                content: '';
-              }
-            }
-          }
-          .email {
-
-            p {
-              font-weight: 400;
-              text-align: center;
-              //background-color: #0033ff;
-            }
-          }
-        }
-        .enderecos {
-          @include span(full);
-          text-align: center;
-          //background-color: #aa3322;
-          margin-bottom: 1rem;
-
-          h3 {
-            text-align: left;
-          }
-          p {
-            display: inline;
-            &:after {
-              content: ' - ';
-            }
-            &:last-child {
-
-              &:after {
-                content: '.';
-              }
-            }
-          }
-        }
-      }
-    }
-  } // breackpoint 40em 8 coluns
-
-  @include susy-breakpoint(64.28em, $gDesk) {
-    //background-color: #222222;
-    .footerContainer {
-      @include container(80%);
-
-      .footerMenu {
-        @include span(2 of 12);
-      }
-      .formasDePagamentos {
-        @include span(5 of 12);
-      }
-      .footerSocial {
-        //@include container(100%);
-        @include span(last 5 of 12);
-      }
-      .footerContato {
-        @include span(80%);
-        margin-top: 1rem;
-        //background-color: #cc6633;
-        line-height: .2rem;
-
-        .fones {
-          //white-space: nowrap;
-          text-align: center;
-
-          span{
-            display: inline;
-            text-align: justify;
-            margin-bottom: 0;
-
-            &:after {
-              content: ' | ';
-            }
-
-            &:nth-child(4) {
-              &:after {
-                content: '';
-              }
-            }
-          }
-          .email {
-
-            p {
-              font-weight: 400;
-              text-align: center;
-              //background-color: #0033ff;
-            }
-          }
-        }
-        .enderecos {
-          @include span(full);
-          text-align: center;
-          //background-color: #aa3322;
-          margin-top: 0;
-
-          h3 {
-            text-align: left;
-          }
-          p {
-            display: inline;
-            &:after {
-              content: ' - ';
-            }
-            &:last-child {
-
-              &:after {
-                content: '.';
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  //@include susy-breakpoint(64.28em, $gDesk) {
+  //@media screen and (max-width:64.28em) {
+  //  //background-color: #222222;
+  //  .footerContainer {
+  //    //@include container(80%);
+  //
+  //    .footerMenu {
+  //      //@include span(2 of 12);
+  //    }
+  //    .formasDePagamentos {
+  //      //@include span(5 of 12);
+  //    }
+  //    .footerSocial {
+  //      //@include container(100%);
+  //      //@include span(last 5 of 12);
+  //    }
+  //
+  //    .footerContato {
+  //      //@include span(80%);
+  //      margin-top: 1rem;
+  //      //background-color: #cc6633;
+  //      line-height: .2rem;
+  //
+  //      .fones {
+  //        //white-space: nowrap;
+  //        text-align: center;
+  //
+  //        span{
+  //          display: inline;
+  //          text-align: justify;
+  //          margin-bottom: 0;
+  //
+  //          &:after {
+  //            content: ' | ';
+  //          }
+  //
+  //          &:nth-child(4) {
+  //            &:after {
+  //              content: '';
+  //            }
+  //          }
+  //        }
+  //        .email {
+  //
+  //          p {
+  //            font-weight: 400;
+  //            text-align: center;
+  //            //background-color: #0033ff;
+  //          }
+  //        }
+  //      }
+  //      .enderecos {
+  //        //@include span(full);
+  //        text-align: center;
+  //        //background-color: #aa3322;
+  //        margin-top: 0;
+  //
+  //        h3 {
+  //          text-align: left;
+  //        }
+  //        p {
+  //          display: inline;
+  //          &:after {
+  //            content: ' - ';
+  //          }
+  //          &:last-child {
+  //
+  //            &:after {
+  //              content: '.';
+  //            }
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //} // breackpoint 64.28 12 columns
 
 }

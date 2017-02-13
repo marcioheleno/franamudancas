@@ -1,21 +1,23 @@
 section.serviceMkt {
-  @include full;
-  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
   background: $colorPrimary;
-  //@extend .servicer;
 
   .serviceMktRow {
-    @include container(80%);
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
 
     .mktService {
-      @include span(4 of 4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-      margin-top: 5rem;
-      //margin: span(2);
 
       &:after {
         position: relative;
-        bottom: -2.7rem;
+        //bottom: -2.7rem;
         left: 50%;
         margin-left: -25%;
         content: '';
@@ -28,6 +30,7 @@ section.serviceMkt {
 
       &:last-child {
         //background-color: #00b3ff;
+        margin-top: 2rem;
         margin-bottom: 0;
 
         &:after {
@@ -53,7 +56,7 @@ section.serviceMkt {
         text-align: center;
 
         h2 {
-          @extend .logo;
+          //@extend .logo;
           font-size: 2rem;
           text-transform: uppercase;
         }
@@ -66,10 +69,10 @@ section.serviceMkt {
       } //.descriptionService
 
       .thumbnailsLogo {
-        @include container(100%);
+        //@include container(100%);
 
         .logo {
-          @include span(100%);
+          //@include span(100%);
 
           h2 {
             font-family: 'slipstreamforward';
@@ -112,8 +115,12 @@ section.serviceMkt {
       }//thumbnailsLogo
 
       .mktDescription {
-        @include container(100%);
-        @include span(100%);
+        //@include container(100%);
+        //@include span(100%);
+
+        &:last-child {
+          margin-top: -60px;
+        }
 
         h3 {
           text-align: center;
@@ -124,13 +131,14 @@ section.serviceMkt {
       }//.mktDescription
 
 
-      @include susy-breakpoint(40em 64.27em, $gMedium) {
-        @include container(100%);
+      //@include susy-breakpoint(40em 64.27em, $gMedium) {
+      @media screen and (max-width:64.28em) {
+        //@include container(100%);
         //background-color: #00b3ff;
         //@include span(8 of 8);
 
         .thumbnailsService {
-          @include span(first 3 of 8);
+          //@include span(first 3 of 8);
           margin-top: 1.6rem;
 
           picture {
@@ -143,7 +151,7 @@ section.serviceMkt {
           }
         }
         .descriptionService {
-          @include span(last 5 of 8);
+          //@include span(last 5 of 8);
           padding: 4% 0;
 
           h2{
@@ -154,10 +162,10 @@ section.serviceMkt {
           }
         }
         .thumbnailsLogo{
-          @include span(last 5 of 8);
+          //@include span(last 5 of 8);
 
           .logo {
-            @include span(100%);
+            //@include span(100%);
 
               span {
                 margin-left: .4rem;
@@ -168,7 +176,7 @@ section.serviceMkt {
         }//.thumbnailsLogo
 
         .mktDescription {
-          @include span(last 3 of 8);
+          //@include span(last 3 of 8);
           padding: .3rem;
           //@include container(100%);
           //@include span(100%);
@@ -182,13 +190,14 @@ section.serviceMkt {
         }//.mktDescription
       } // susy-breakpoint(40em, $gMedium)
 
-      @include susy-breakpoint(64.28em, $gDesk) {
-        @include container(100%);
+      //@include susy-breakpoint(64.28em, $gDesk) {
+      @media screen and (max-width:64.28em) {
+        //@include container(100%);
         //background-color: #00b3ff;
         //@include span(8 of 8);
 
         .thumbnailsService {
-          @include span(first 3 of 8);
+          //@include span(first 3 of 8);
           margin-top: 1.6rem;
 
           picture {
@@ -201,7 +210,7 @@ section.serviceMkt {
           }
         }
         .descriptionService {
-          @include span(last 5 of 8);
+          //@include span(last 5 of 8);
           padding: 4% 0;
 
           h2{
@@ -212,10 +221,10 @@ section.serviceMkt {
           }
         }
         .thumbnailsLogo{
-          @include span(last 5 of 8);
+          //@include span(last 5 of 8);
 
           .logo {
-            @include span(100%);
+            //@include span(100%);
 
             span {
               margin-left: .4rem;
@@ -226,7 +235,7 @@ section.serviceMkt {
         }//.thumbnailsLogo
 
         .mktDescription {
-          @include span(last 3 of 8);
+          //@include span(last 3 of 8);
           padding: .3rem;
           //@include container(100%);
           //@include span(100%);

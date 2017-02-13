@@ -1,5 +1,5 @@
 .testimonials-section {
-  @include full;
+  //@include full;
   background-color: $colorTertiary;
 
   .testimonials-wrapper {
@@ -7,7 +7,7 @@
     //@include span(90%);
     //max-width: $M;
     background: rgba(darken($colorTertiary, 10%), .9);
-    margin: 2rem 2rem;
+    margin: 0 10%;
     //@include font-smoothing;
     //padding: 20px 40px 70px;
     z-index: 1;
