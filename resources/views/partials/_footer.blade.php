@@ -53,10 +53,10 @@
         <div class="footerSocial">
             <h2>Redes Social</h2>
             <div class="iconRedes">
-                <a href="#" class="instagram">Instagram</a>
-                <a href="#" class="facebook">Facebook</a>
-                <a href="#" class="twitter">Twitter</a>
-                <a href="#" class="whatsapp">Whatsapp</a>
+                <span><a href="#" class="instagram">Instagram</a></span>
+                <span><a href="#" class="facebook">Facebook</a></span>
+                <span><a href="#" class="twitter">Twitter</a></span>
+                <span><a href="#" class="whatsapp">Whatsapp</a></span>
             </div>
         </div>
 

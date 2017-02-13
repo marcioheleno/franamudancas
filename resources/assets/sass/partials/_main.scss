@@ -1,34 +1,37 @@
 main {
-  //@include layout($gMobile);
-  background: url("/images/boxUp.jpg") no-repeat center;
   background-size: cover;
-  //overflow-y: scroll;
   height: auto;
   margin: 0;
+  padding: 0 5%;
+  box-sizing: content-box;
 
   //@include susy-breakpoint(64.28em, $gDesk) {
-  @media screen and (max-width:64.28em) {
-    //height: auto;
-    background-size: 100%;
-    background-position: top center;
-    overflow-y: hidden;
-  }
+  //@media screen and (max-width:64.28em) {
+  //  //height: auto;
+  //  background-size: 100%;
+  //  background-position: top center;
+  //  overflow-y: hidden;
+  //}
 }
 
 section.main {
-  //@include container(80%);
   background-color: rgba(224,4,11, 0.7);
   padding: 5%;
-  //margin: 5%;
+  margin-top: 5%;
 
   .servicer {
     position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .pageService {
-      //@include span(4 of 4);
       height: 100%;
       margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &:last-child {
         margin-bottom: .9rem;
@@ -41,9 +44,10 @@ section.main {
       // thumbnails
       .thumbnails {
         //@include full;
-        margin-bottom: span(.3);
+        margin-bottom: 0.5rem;
 
         picture {
+
           img {
             width: 100%;
             height: auto;
@@ -58,7 +62,6 @@ section.main {
       }
 
       .description {
-        //@include full;
         background: $colorTertiary;
         color: $colorPrimary;
         text-align: center;
@@ -68,8 +71,8 @@ section.main {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         word-break: keep-all;
         border-bottom: 5px solid white;
-
-
+        display: flex;
+        flex-direction: column;
 
         h2 {
           font-size: 200%;
@@ -80,6 +83,7 @@ section.main {
           padding: .5rem;
           font-size: 100%;
           line-height: 1.2;
+          margin-top: 0;
         }
       }
       .divisor {
@@ -142,298 +146,7 @@ section.main {
   }
 
 
-  .serviceMkt {
-    //@include full;
-    margin-bottom: 5rem;
-    background: $colorPrimary;
-    //@extend .servicer;
 
-    .serviceMktRow {
-      //@include container(80%);
-
-      .mktService {
-        //@include span(4 of 4);
-
-        margin-top: 5rem;
-        //margin: span(2);
-
-        &:after {
-          position: relative;
-          bottom: -2.7rem;
-          left: 50%;
-          margin-left: -25%;
-          content: '';
-          width: 50%;
-
-          height: 5px;
-          background: $colorTertiary;
-
-        }
-
-        &:last-child {
-          //background-color: #00b3ff;
-          margin-bottom: 0;
-
-          &:after {
-            display: none;
-          }
-        }
-        .thumbnailsService {
-          //width: 80%;
-          //margin: 10%;
-          picture {
-            padding: 10%;
-
-            img {
-              width: 80%;
-              height: auto;
-            }
-          }
-        }//.thumbnailsService
-
-        .descriptionService {
-          background: none;
-          color: $colorAzul;
-          text-align: center;
-
-          h2 {
-            //@extend .logo;
-            font-size: 2rem;
-            text-transform: uppercase;
-          }
-
-          p {
-            font-size: 1.2rem;
-            margin-top: -1.1rem;
-          }
-
-        } //.descriptionService
-
-        .thumbnailsLogo {
-          //@include container(100%);
-
-          .logo {
-            //@include span(100%);
-
-            h2 {
-              font-family: 'slipstreamforward';
-              font-size: 3.5rem;
-              text-transform: uppercase;
-              text-align: center;
-              letter-spacing: 0.07142857rem;
-              color: $colorTertiary;
-              padding: 0;
-              margin: 0;
-
-              span {
-                font-family: 'RageItalic';
-                font-size: 5rem;
-                padding: 0;
-                margin: -10px 0;
-                right: 48px;
-                color: $colorAzul;
-                //line-height: .3rem;
-              }
-            }
-            h3 {
-              text-align: center;
-              margin-top: -2.5rem;
-              //margin-right: .5rem;
-              font-size: 1.1rem;
-              padding: 0;
-              color: $colorAzul;
-
-              span {
-                font-size: 1.8rem;
-                font-family: 'RageItalic';
-                color: $colorTertiary;
-                letter-spacing: 0.07142857rem;
-                margin-left: .3rem;
-                margin-top: -1rem;
-              }
-            }
-          } // .logo
-        }//thumbnailsLogo
-
-        .mktDescription {
-          //@include container(100%);
-          //@include span(100%);
-
-          h3 {
-            text-align: center;
-            font-size: 1.5rem;
-            color: $colorAzul;
-          }
-
-        }//.mktDescription
-
-
-        //@include susy-breakpoint(40em 64.27em, $gMedium) {
-        @media screen and (max-width:64.28em) {
-          //@include container(100%);
-          //background-color: #00b3ff;
-          //@include span(8 of 8);
-
-          .thumbnailsService {
-            //@include span(first 3 of 8);
-            margin-top: 1.6rem;
-
-            picture {
-              //margin-top: 10%;
-
-              img {
-                width: 80%;
-                height: auto;
-              }
-            }
-          }
-          .descriptionService {
-            //@include span(last 5 of 8);
-            padding: 4% 0;
-
-            h2{
-              font-size: 2.6rem;
-            }
-            p{
-              font-size: 1.6rem;
-            }
-          }
-          .thumbnailsLogo{
-            //@include span(last 5 of 8);
-
-            .logo {
-              //@include span(100%);
-
-              span {
-                margin-left: .4rem;
-                margin-top: -55px;
-
-              }
-            }
-          }//.thumbnailsLogo
-
-          .mktDescription {
-            //@include span(last 3 of 8);
-            padding: .3rem;
-            //@include container(100%);
-            //@include span(100%);
-
-            h3 {
-              text-align: center;
-              font-size: 1.5rem;
-              color: $colorAzul;
-            }
-
-          }//.mktDescription
-        } // susy-breakpoint(40em, $gMedium)
-
-        //@include susy-breakpoint(64.28em, $gDesk) {
-        @media screen and (max-width:64.28em) {
-          //@include container(100%);
-          //background-color: #00b3ff;
-          //@include span(8 of 8);
-
-          .thumbnailsService {
-            //@include span(first 3 of 8);
-            margin-top: 1.6rem;
-
-            picture {
-              //margin-top: 10%;
-
-              img {
-                width: 80%;
-                height: auto;
-              }
-            }
-          }
-          .descriptionService {
-            //@include span(last 5 of 8);
-            padding: 4% 0;
-
-            h2{
-              font-size: 2.6rem;
-            }
-            p{
-              font-size: 1.6rem;
-            }
-          }
-          .thumbnailsLogo{
-            //@include span(last 5 of 8);
-
-            .logo {
-              //@include span(100%);
-
-              span {
-                margin-left: .4rem;
-                margin-top: -55px;
-
-              }
-            }
-          }//.thumbnailsLogo
-
-          .mktDescription {
-            //@include span(last 3 of 8);
-            padding: .3rem;
-            //@include container(100%);
-            //@include span(100%);
-
-            h3 {
-              text-align: center;
-              font-size: 1.5rem;
-              color: $colorAzul;
-            }
-
-          }//.mktDescription
-        } // susy-breakpoint(40em, $gDesk)
-      }//.mktService
-    }//.serviceMktRow
-  }//section.serviceMkt
 
   //  section
 }
-/*
-
-.content-bar {
-  padding: 0 10px;
-
-  margin-top: gutter();
-
-  div:nth-child(1) {
-    @include span(6 of 12);
-
-    //@include  gutters(3em inside);
-
-    @include  breakpoint((max-width 40em)){
-      @include span(12 of 12);
-    }
-  }
-
-  div:nth-child(2) {
-    @include span(last 6 of 12);
-
-    @include breakpoint((max-width 40em)) {
-      @include span(12 of 12);
-    }
-  }
-}
-
-
-<section class="servicer">
-
-<!-- services Frota Própria-->
-<div class="pageService">
-<div class="thumbnails">
-<img src="assets/img/DSC_0357.jpg" alt="Frota Própria">
-</div>
-<div class="description">
-<h2>Frota Própria</h2>
-<p>
- Nossos veículos são revisados e equipados para oeferece serviços especializados.
- Contamos com caminhão baú e Kombi Carroceria.
-</p>
-</div>
-
-</div>
-</section>
-
-*/

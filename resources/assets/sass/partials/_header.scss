@@ -13,8 +13,8 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, .5);
-    border-bottom: 4px solid $colorSecundary;
+    background: rgba(255, 255, 255, .6);
+    border-bottom: 0.25rem solid $colorSecundary;
     text-align: center;
     z-index: 10;
 
@@ -182,94 +182,94 @@ header {
   } // menuShow
 
   //@include susy-breakpoint(64.28em, $gDesk) {
-  @media screen and (max-width:64.28em) {
-    background: rgba(255, 255, 255, .5);
-    //border-bottom: 4px solid $colorSecundary;
-    //@include box-shadow($colorTertiary 0 3px 0);
-    text-align: left;
-
-    .container {
-      //@include container(85%);
-
-
-      .headerLogo {
-        background: none;
-        border-bottom: none;
-        //@include span(2 of 12);
-        //@include box-shadow(none);
-
-        p {
-          font-size: .75rem;
-        }
-
-      }//.headerLogo
-
-      nav {
-        //@include span(last 10 of 12);
-        background-color: transparent;
-        position: static;
-        transform: translateX(0);
-        height: 100%;
-        //background-color: yellow;
-
-
-        .navContainer {
-          background-color: transparent;
-          text-decoration: none;
-          //text-align: left;
-          //overflow: scroll;
-
-          ul {
-            padding: 1rem 0;
-            //margin: 0;
-            height: 100%;
-            margin-top: .7rem;
-
-
-            li {
-              //@include span(first 2 of 10);
-              padding: 0;
-              //width: 100%;
-
-              &:nth-child(odd){
-                background-color: transparent;
-              }
-
-              &:hover {
-                background-color: transparent;
-                color: $colorTertiary;
-              }
-
-              &:last-child {
-                //@include span(last 2 of 10);
-
-                //margin-left: 0;
-
-              }
-              a{
-                //width: 100%;
-                //height: 100%;
-                //padding: 2rem 3rem;
-                //background-color: $colorPrimary;
-
-              }
-            }
-
-          }
-
-          .menuRedeSocial{
-            display: none;
-          }
-        }
-
-      } // nav
-
-    }
-
-    .triggerMenu {
-      display: none;
-    }
-  } // susy-breakpoint(64.28em, $gDesk)
+  //@media screen and (max-width:64.28em) {
+  //  background: rgba(255, 255, 255, .5);
+  //  //border-bottom: 4px solid $colorSecundary;
+  //  //@include box-shadow($colorTertiary 0 3px 0);
+  //  text-align: left;
+  //
+  //  .container {
+  //    //@include container(85%);
+  //
+  //
+  //    .headerLogo {
+  //      background: none;
+  //      border-bottom: none;
+  //      //@include span(2 of 12);
+  //      //@include box-shadow(none);
+  //
+  //      p {
+  //        font-size: .75rem;
+  //      }
+  //
+  //    }//.headerLogo
+  //
+  //    nav {
+  //      //@include span(last 10 of 12);
+  //      background-color: transparent;
+  //      position: static;
+  //      transform: translateX(0);
+  //      height: 100%;
+  //      //background-color: yellow;
+  //
+  //
+  //      .navContainer {
+  //        background-color: transparent;
+  //        text-decoration: none;
+  //        //text-align: left;
+  //        //overflow: scroll;
+  //
+  //        ul {
+  //          padding: 1rem 0;
+  //          //margin: 0;
+  //          height: 100%;
+  //          margin-top: .7rem;
+  //
+  //
+  //          li {
+  //            //@include span(first 2 of 10);
+  //            padding: 0;
+  //            //width: 100%;
+  //
+  //            &:nth-child(odd){
+  //              background-color: transparent;
+  //            }
+  //
+  //            &:hover {
+  //              background-color: transparent;
+  //              color: $colorTertiary;
+  //            }
+  //
+  //            &:last-child {
+  //              //@include span(last 2 of 10);
+  //
+  //              //margin-left: 0;
+  //
+  //            }
+  //            a{
+  //              //width: 100%;
+  //              //height: 100%;
+  //              //padding: 2rem 3rem;
+  //              //background-color: $colorPrimary;
+  //
+  //            }
+  //          }
+  //
+  //        }
+  //
+  //        .menuRedeSocial{
+  //          display: none;
+  //        }
+  //      }
+  //
+  //    } // nav
+  //
+  //  }
+  //
+  //  .triggerMenu {
+  //    display: none;
+  //  }
+  //} // susy-breakpoint(64.28em, $gDesk)
 
 
   //@include susy-breakpoint(64.28em, $gDesk) {
