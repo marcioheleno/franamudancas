@@ -140,28 +140,42 @@ section.slideComponent {
                 padding: 1% 20%;
               }
             }
+          } //@midia 480px
+
+          @media only screen and (min-width: 1024px) {
+
+            .slideContainerText {
+              padding: 2%;
+
+              h1 {
+                font-size: 550%;
+              }
+              h2{
+                font-size: 300%;
+              }
+              .slideButton {
+                font-size: 250%;
+                padding: 1.5% 18%;
+              }
+            }
+
+            .slideSuaHistoria {
+              margin-top: -140px;
+
+              img {
+                width: 55%;
+                margin: 15px 0px -84px 0px;
+              }
+            }
+
+            //.slideSuaHistoria {
+            //  .slideButton{
+            //    @extend .slideButton;
+            //  }
+            //}
 
           }
-
-          //@include susy-breakpoint(64.28em, $gDesk) {
-          //  width: 80%;
-          //
-          //  img {
-          //    width: 60%;
-          //  }
-          //
-          //  h1 {
-          //    font-size: 7rem;
-          //  }
-          //
-          //  h2{
-          //    font-size: 3rem;
-          //  }
-          //  .slideButton{
-          //    width: 60%;
-          //  }
-          //
-          //}
+        
         }
       }
     }

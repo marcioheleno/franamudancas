@@ -568,11 +568,6 @@ header nav .navContent ul li:nth-child(odd) {
   background: #d8dade;
 }
 
-header nav .navContent ul li:hover {
-  background: #c0c0c0;
-  color: #ff0d00;
-}
-
 header nav .navContent ul li a {
   text-decoration: none;
 }
@@ -623,10 +618,6 @@ header nav .navContent .menuRedeSocial .iconRedes a {
   padding: .3rem;
 }
 
-header nav .navContent .menuRedeSocial .iconRedes a:hover {
-  opacity: .5;
-}
-
 header nav .navContent .menuRedeSocial .instagram {
   background: url(/fonts/instagram.svg?58f3761c4e69bddcbcee497b786366a3) no-repeat center 100%;
 }
@@ -661,6 +652,100 @@ header .triggerMenu {
 
 header .menuShow {
   left: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    box-sizing: content-box;
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: 0.25rem solid #0033ff;
+    box-sizing: content-box;
+  }
+
+  header .headerLogo {
+    width: 21rem;
+    height: auto;
+    background: none;
+    border-bottom: none;
+  }
+
+  header nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: none;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  header nav .navContent {
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  header nav .navContent ul {
+    background: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 100%;
+    padding: 24px;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  header nav .navContent ul li {
+    background: none;
+  }
+
+  header nav .navContent ul li a:visited {
+    color: #ff0d00;
+  }
+
+  header nav .navContent ul li a:hover {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  header nav .navContent ul li:nth-child(odd) {
+    background: none;
+  }
+
+  header nav .navContent .menuRedeSocial {
+    padding: 1rem;
+  }
+
+  header nav .navContent .menuRedeSocial a:hover {
+    opacity: .3;
+  }
+
+  header .triggerMenu {
+    display: none;
+  }
 }
 
 section.slideComponent {
@@ -820,6 +905,34 @@ section.slideComponent {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText {
+    padding: 2%;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText h1 {
+    font-size: 550%;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText h2 {
+    font-size: 300%;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText .slideButton {
+    font-size: 250%;
+    padding: 1.5% 18%;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideSuaHistoria {
+    margin-top: -140px;
+  }
+
+  .slideWrap .slideBlock .slider .slide .slidecontent .slideSuaHistoria img {
+    width: 55%;
+    margin: 15px 0px -84px 0px;
+  }
+}
+
 .slideWrap #slideposition {
   width: 100%;
   position: absolute;
@@ -856,22 +969,20 @@ section.slideComponent {
 }
 
 main {
-  background-size: cover;
   height: auto;
   margin: 0;
   padding: 0 5%;
   box-sizing: content-box;
 }
 
-section.main {
+main section.main {
   background-color: rgba(224, 4, 11, 0.7);
   padding: 5%;
   margin-top: 5%;
 }
 
-section.main .servicer {
+main section.main .servicer {
   position: relative;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,8 +995,7 @@ section.main .servicer {
           justify-content: space-between;
 }
 
-section.main .servicer .pageService {
-  height: 100%;
+main section.main .servicer .pageService {
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -899,19 +1009,19 @@ section.main .servicer .pageService {
           justify-content: space-between;
 }
 
-section.main .servicer .pageService:last-child {
+main section.main .servicer .pageService:last-child {
   margin-bottom: .9rem;
 }
 
-section.main .servicer .pageService:last-child:after {
+main section.main .servicer .pageService:last-child:after {
   display: none;
 }
 
-section.main .servicer .pageService .thumbnails {
+main section.main .servicer .pageService .thumbnails {
   margin-bottom: 0.5rem;
 }
 
-section.main .servicer .pageService .thumbnails picture img {
+main section.main .servicer .pageService .thumbnails picture img {
   width: 100%;
   height: auto;
   border-radius: 20% 0 20% 0;
@@ -919,7 +1029,7 @@ section.main .servicer .pageService .thumbnails picture img {
   border-bottom: 5px solid white;
 }
 
-section.main .servicer .pageService .description {
+main section.main .servicer .pageService .description {
   background: #ff0d00;
   color: white;
   text-align: center;
@@ -936,19 +1046,19 @@ section.main .servicer .pageService .description {
           flex-direction: column;
 }
 
-section.main .servicer .pageService .description h2 {
+main section.main .servicer .pageService .description h2 {
   font-size: 200%;
   word-spacing: .5rem;
 }
 
-section.main .servicer .pageService .description p {
+main section.main .servicer .pageService .description p {
   padding: .5rem;
   font-size: 100%;
   line-height: 1.2;
   margin-top: 0;
 }
 
-section.main .servicer .pageService .divisor {
+main section.main .servicer .pageService .divisor {
   position: relative;
   left: 50%;
   margin-left: -25%;
@@ -962,23 +1072,66 @@ section.main .servicer .pageService .divisor {
   border-radius: 5px;
 }
 
-section.main .servicer .pageService .divisor:last-child {
+main section.main .servicer .pageService .divisor:last-child {
   background: #ff0d00;
 }
 
 @media screen and (max-width: 64.28em) {
-  section.main .servicer .pageService span {
+  main section.main .servicer .pageService span {
     display: none;
   }
 }
 
-@media screen and (max-width: 64.28em) {
-  section.main .servicer .pageService span {
-    display: none;
+@media only screen and (min-width: 1024px) {
+  main {
+    background: url(/images/boxUp.jpg?28c0cc4815e9ffb69d2015e71a0f901e);
+    background-position: bottom center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 4%;
   }
 
-  section.main .servicer .pageService .description {
-    box-sizing: border-box;
+  main section.main {
+    margin: 2rem 0;
+    padding: 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  main section.main .servicer {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  main section.main .servicer .pageService {
+    width: 22%;
+  }
+
+  main section.main .servicer .pageService:last-child {
+    margin-bottom: 0;
+  }
+
+  main section.main .servicer .pageService .description {
+    display: block;
+    padding: 5px;
+  }
+
+  main section.main .servicer .pageService .description h2 {
+    display: block;
+    white-space: pre-wrap;
   }
 }
 
