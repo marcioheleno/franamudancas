@@ -32,41 +32,43 @@
             <div class="enderecos">
                 <h3>Endereço:</h3>
                 <address>
-                    <p>
-                        Rua Goiânia, 1356 - Henrique Jorge - Fortaleza-CE | Cep: 60510-100
-                    </p>
+                    <span>Rua Goiânia, 1356 | Cep: 60510-100</span>
+                    <span>Henrique Jorge - Fortaleza-CE</span>
                 </address>
             </div><!--enderecos-->
         </div>
-        <!--formasDePagamento-->
-        <div class="formasDePagamentos">
-            <h2>Formas de Pagamento</h2>
-            <div class="iconCard">
-                <span>MasterCard</span>
-                <span>VisaCard</span>
-                <span>DinnerCard</span>
-                <span>HiperCard</span>
-            </div>
-        </div>
-        <!--formasDePagamento-->
-        <!--footerSocial -->
-        <div class="footerSocial">
-            <h2>Redes Social</h2>
-            <div class="iconRedes">
-                <span><a href="#" class="instagram">Instagram</a></span>
-                <span><a href="#" class="facebook">Facebook</a></span>
-                <span><a href="#" class="twitter">Twitter</a></span>
-                <span><a href="#" class="whatsapp">Whatsapp</a></span>
-            </div>
-        </div>
 
-        <div class="logoFooter">
-            <img src="/images/franaLogo_b.svg" alt="Logo Frana 26 anos">
-            <p>© 2016 - Frana Mudanças - Direitos Reservados</p>
-        </div><!--logo-->
+        <div class="footerMarket">
+            <!--formasDePagamento-->
+            <div class="formasDePagamentos">
+                <h2>Formas de Pagamento</h2>
+                <div class="iconCard">
+                    <span>MasterCard</span>
+                    <span>VisaCard</span>
+                    <span>DinnerCard</span>
+                    <span>HiperCard</span>
+                </div>
+            </div>
+            <!--formasDePagamento-->
+            <!--footerSocial -->
+            <div class="footerSocial">
+                <h2>Redes Social</h2>
+                <div class="iconRedes">
+                    <span><a href="#" class="instagram">Instagram</a></span>
+                    <span><a href="#" class="facebook">Facebook</a></span>
+                    <span><a href="#" class="twitter">Twitter</a></span>
+                    <span><a href="#" class="whatsapp">Whatsapp</a></span>
+                </div>
+            </div>
+        </div>
     </div><!--footerContainer-->
-
+    <div class="logoFooter">
+        <p>
+            <img src="/images/franaLogo_b.svg" alt="Logo Frana 26 anos">
+            <span>© 2016 - Frana Mudanças - Direitos Reservados</span>
+        </p>
+    </div><!--logo-->
     <div class="assi">
-        www.marcioheleno.website
+        <a href="http://marcioheleno.website">www.marcioheleno.website</a>
     </div>
 </footer>
