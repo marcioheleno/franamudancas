@@ -19,7 +19,7 @@ main {
         margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         &:last-child {
           margin-bottom: .9rem;
@@ -153,11 +153,13 @@ main {
           }
 
           .thumbnails {
+            min-height: 156.234px;
           }
 
           .description {
             display: block;
             padding: 5px;
+            min-height: 254.094px;
 
             h2 {
               display: block;

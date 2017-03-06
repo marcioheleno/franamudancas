@@ -1,54 +1,40 @@
 section.serviceMkt {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
   background: $colorPrimary;
+  box-sizing: border-box;
+  padding: 5%;
+  //background-color: #2ca02c;
+  text-align: center;
 
   .serviceMktRow {
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 5%;
 
     .mktService {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
 
-
-      &:after {
-        position: relative;
-        //bottom: -2.7rem;
-        left: 50%;
-        margin-left: -25%;
-        content: '';
-        width: 50%;
-
-        height: 5px;
-        background: $colorTertiary;
-
-      }
-
       &:last-child {
-        //background-color: #00b3ff;
-        margin-top: 2rem;
-        margin-bottom: 0;
+        border-top: 2px solid #ff0d00;
 
         &:after {
           display: none;
         }
       }
       .thumbnailsService {
-        //width: 80%;
-        //margin: 10%;
+
         picture {
-          padding: 10%;
 
           img {
             width: 80%;
             height: auto;
           }
         }
-      }//.thumbnailsService
+      } //.thumbnailsService
 
       .descriptionService {
         background: none;
@@ -56,7 +42,6 @@ section.serviceMkt {
         text-align: center;
 
         h2 {
-          //@extend .logo;
           font-size: 2rem;
           text-transform: uppercase;
         }
@@ -66,7 +51,8 @@ section.serviceMkt {
           margin-top: -1.1rem;
         }
 
-      } //.descriptionService
+      }//.descriptionService
+
 
       .thumbnailsLogo {
         //@include container(100%);
@@ -91,13 +77,11 @@ section.serviceMkt {
               margin: -10px 0;
               right: 48px;
               color: $colorAzul;
-              //line-height: .3rem;
             }
           }
           h3 {
             text-align: center;
             margin-top: -2.5rem;
-            //margin-right: .5rem;
             font-size: 1.1rem;
             padding: 0;
             color: $colorAzul;
@@ -111,7 +95,8 @@ section.serviceMkt {
               margin-top: -1rem;
             }
           }
-        } // .logo
+        }// .logo
+
       }//thumbnailsLogo
 
       .mktDescription {
@@ -130,123 +115,27 @@ section.serviceMkt {
 
       }//.mktDescription
 
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
 
-      //@include susy-breakpoint(40em 64.27em, $gMedium) {
-      @media screen and (max-width:64.28em) {
-        //@include container(100%);
-        //background-color: #00b3ff;
-        //@include span(8 of 8);
+    .serviceMktRow {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
 
-        .thumbnailsService {
-          //@include span(first 3 of 8);
-          margin-top: 1.6rem;
+      .mktService{
 
-          picture {
-            //margin-top: 10%;
-
-            img {
-              width: 80%;
-              height: auto;
-            }
-          }
+        &:last-child{
+          border: none;
         }
-        .descriptionService {
-          //@include span(last 5 of 8);
-          padding: 4% 0;
 
-          h2{
-            font-size: 2.6rem;
-          }
-          p{
-            font-size: 1.6rem;
-          }
-        }
-        .thumbnailsLogo{
-          //@include span(last 5 of 8);
+      }
 
-          .logo {
-            //@include span(100%);
+    }
 
-              span {
-                margin-left: .4rem;
-                margin-top: -55px;
-
-            }
-          }
-        }//.thumbnailsLogo
-
-        .mktDescription {
-          //@include span(last 3 of 8);
-          padding: .3rem;
-          //@include container(100%);
-          //@include span(100%);
-
-          h3 {
-            text-align: center;
-            font-size: 1.5rem;
-            color: $colorAzul;
-          }
-
-        }//.mktDescription
-      } // susy-breakpoint(40em, $gMedium)
-
-      //@include susy-breakpoint(64.28em, $gDesk) {
-      @media screen and (max-width:64.28em) {
-        //@include container(100%);
-        //background-color: #00b3ff;
-        //@include span(8 of 8);
-
-        .thumbnailsService {
-          //@include span(first 3 of 8);
-          margin-top: 1.6rem;
-
-          picture {
-            //margin-top: 10%;
-
-            img {
-              width: 80%;
-              height: auto;
-            }
-          }
-        }
-        .descriptionService {
-          //@include span(last 5 of 8);
-          padding: 4% 0;
-
-          h2{
-            font-size: 2.6rem;
-          }
-          p{
-            font-size: 1.6rem;
-          }
-        }
-        .thumbnailsLogo{
-          //@include span(last 5 of 8);
-
-          .logo {
-            //@include span(100%);
-
-            span {
-              margin-left: .4rem;
-              margin-top: -55px;
-
-            }
-          }
-        }//.thumbnailsLogo
-
-        .mktDescription {
-          //@include span(last 3 of 8);
-          padding: .3rem;
-          //@include container(100%);
-          //@include span(100%);
-
-          h3 {
-            text-align: center;
-            font-size: 1.5rem;
-            color: $colorAzul;
-          }
-        }//.mktDescription
-      } // susy-breakpoint(40em, $gDesk)
-    }//.mktService
-  }//.serviceMktRow
+  }
 }//section.serviceMkt
