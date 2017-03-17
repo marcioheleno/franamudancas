@@ -26,6 +26,8 @@ section.serviceMkt {
         }
       }
       .thumbnailsService {
+        color: $colorAzul;
+        text-align: center;
 
         picture {
 
@@ -34,12 +36,22 @@ section.serviceMkt {
             height: auto;
           }
         }
+
+        h2 {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-top: -1.1rem;
+        }
+
       } //.thumbnailsService
 
       .descriptionService {
         background: none;
-        color: $colorAzul;
-        text-align: center;
+
 
         h2 {
           font-size: 2rem;
@@ -55,7 +67,7 @@ section.serviceMkt {
 
 
       .thumbnailsLogo {
-        //@include container(100%);
+        margin: 1rem;
 
         .logo {
           //@include span(100%);
@@ -104,7 +116,7 @@ section.serviceMkt {
         //@include span(100%);
 
         &:last-child {
-          margin-top: -60px;
+          margin-top: -2rem;
         }
 
         h3 {

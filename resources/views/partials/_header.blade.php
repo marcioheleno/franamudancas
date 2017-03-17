@@ -35,6 +35,6 @@
         </div>
     </nav> <!-- nav -->
     <div class="triggerMenu" id="triggerMenu">
-        <i class=""><a href="#">TriggerMenu</a></i>
+        <a href="#"  id="triggerMenu">TriggerMenu</a>
     </div>
 </header>

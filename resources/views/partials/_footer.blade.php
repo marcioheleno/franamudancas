@@ -64,7 +64,7 @@
     </div><!--footerContainer-->
     <div class="logoFooter">
         <p>
-            <img src="/images/franaLogo_b.svg" alt="Logo Frana 26 anos">
+            <img src="/images/frana-logo-b.svg" alt="Logo Frana 26 anos">
             <span>© 2016 - Frana Mudanças - Direitos Reservados</span>
         </p>
     </div><!--logo-->

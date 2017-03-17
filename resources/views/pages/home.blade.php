@@ -58,7 +58,7 @@
                     <div class="slide" id="five">
                         <div class="slidecontent">
                             <div class="slideContainerText slideSuaHistoria">
-                                <img class="logo-slide" src="./images/frana-logo-26anos.svg" alt="Logo Frana 26 anos">
+                                <img class="logo-slide" src="./images/logo-frana-shadow.svg" alt="Logo Frana 26 anos">
                                 <h2>Você faz parte dessa História.</h2>
                                 <div class="slideButton">
                                     Nossa História
@@ -164,22 +164,24 @@
                     <picture>
                         <img src="./images/24hours.svg" alt="Guarda Móveis">
                     </picture>
-                </div>
-                <div class="descriptionService">
                     <h2>Atendimento</h2>
                     <p>Sábados, Domingo e Feriados</p>
+                </div>
+                <div class="descriptionService">
+
                 </div>
                 <!--<div class="divisor"></div>-->
             </div>
             <div class="mktService">
                 <div class="thumbnailsLogo">
                     <div class="logo">
-                        <img src="./images/frana-logo-26anos.svg" alt="Logo Frana 26 anos">
+                        <img src="./images/frana-logo-26.svg" alt="Logo Frana 26 anos">
                     </div>
-                </div>
-                <div class="mktDescription">
                     <h3>Você faz parte dessa história</h3>
                 </div>
+                {{--<div class="mktDescription">--}}
+                    {{--<h3>Você faz parte dessa história</h3>--}}
+                {{--</div>--}}
             </div>
         </div><!-- /mktService -->
     </section><!-- /serviceMkt -->

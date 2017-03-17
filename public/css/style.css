@@ -809,7 +809,7 @@ section.slideComponent {
 
 .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText img {
   margin-top: 5%;
-  margin-bottom: -38px;
+  margin-bottom: -28px;
 }
 
 .slideWrap .slideBlock .slider .slide .slidecontent .slideContainerText h1 {
@@ -935,8 +935,8 @@ section.slideComponent {
 
 .slideWrap #slideposition {
   width: 100%;
-  position: absolute;
-  bottom: 5%;
+  position: relative;
+  bottom: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1186,15 +1186,28 @@ section.serviceMkt .serviceMktRow .mktService:last-child:after {
   display: none;
 }
 
+section.serviceMkt .serviceMktRow .mktService .thumbnailsService {
+  color: #001881;
+  text-align: center;
+}
+
 section.serviceMkt .serviceMktRow .mktService .thumbnailsService picture img {
   width: 80%;
   height: auto;
 }
 
+section.serviceMkt .serviceMktRow .mktService .thumbnailsService h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsService p {
+  font-size: 1.2rem;
+  margin-top: -1.1rem;
+}
+
 section.serviceMkt .serviceMktRow .mktService .descriptionService {
   background: none;
-  color: #001881;
-  text-align: center;
 }
 
 section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
@@ -1205,6 +1218,10 @@ section.serviceMkt .serviceMktRow .mktService .descriptionService h2 {
 section.serviceMkt .serviceMktRow .mktService .descriptionService p {
   font-size: 1.2rem;
   margin-top: -1.1rem;
+}
+
+section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo {
+  margin: 1rem;
 }
 
 section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h2 {
@@ -1245,7 +1262,7 @@ section.serviceMkt .serviceMktRow .mktService .thumbnailsLogo .logo h3 span {
 }
 
 section.serviceMkt .serviceMktRow .mktService .mktDescription:last-child {
-  margin-top: -60px;
+  margin-top: -2rem;
 }
 
 section.serviceMkt .serviceMktRow .mktService .mktDescription h3 {
@@ -1644,7 +1661,7 @@ footer .logoFooter p img {
 
 footer .logoFooter p span {
   color: white;
-  margin-top: -0.5rem;
+  margin-top: 1rem;
 }
 
 footer .assi {
@@ -1785,4 +1802,5 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: content-box;
+  overflow-x: hidden;
 }
