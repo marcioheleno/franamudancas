@@ -4,7 +4,7 @@
             <h2>Acesso Rapido</h2>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Quem Somos</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Blog</a></li>

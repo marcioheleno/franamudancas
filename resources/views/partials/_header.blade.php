@@ -7,9 +7,9 @@
         <div class="navContent">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">Quem Somos</a></li>
+                <li><a href="#">Quem Somos</a></li>
                 <li>
-                    <a href="/servico" class="dropbtn">Serviço</a>
+                    <a href="#" class="dropbtn">Serviço</a>
                     <div class="menuServicos" id="menuServicos">
                         <a href="#">Mudanças Residencial</a>
                         <a href="#">Mudanças Comercial</a>
@@ -21,8 +21,8 @@
                         <a href="#">Transporte de Cargas em Geral</a>
                     </div>
                 </li>
-                <li><a href="/orcamento">Orçamento</a></li>
-                <li><a href="/contact">Contato</a></li>
+                <li><a href="#">Orçamento</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
             <div class="menuRedeSocial">
                 <div class="iconRedes">
