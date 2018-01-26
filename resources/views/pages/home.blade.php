@@ -191,12 +191,12 @@
         <div class="testimonials-wrapper">
 
             <div class="testimonials-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Há mais de 27 anos no mercado e atuando em todo o território nacional, a Frana Mudancas investe constantemente em seus serviços e busca profissionais que queiram se desenvolver e adquirir conhecimentos.</p>
                 <div class="author">
                     {{--<img src="img/avatar-1.jpg" alt="Author image">--}}
                     <ul class="author-info">
-                        <li>MyName</li>
-                        <li>CEO, AmberCreative</li>
+                        <li>Alberto Nogueira</li>
+                        {{--<li>CEO, AmberCreative</li>--}}
                     </ul>
                 </div>
             </div>

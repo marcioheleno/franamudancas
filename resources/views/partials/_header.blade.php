@@ -6,11 +6,7 @@
     <nav>
         <div class="navContent">
             <ul>
-<<<<<<< HEAD
                 <li><a href="/">Home</a></li>
-=======
-                <li><a href="#">Home</a></li>
->>>>>>> develop
                 <li><a href="#">Quem Somos</a></li>
                 <li>
                     <a href="#" class="dropbtn">Serviço</a>
